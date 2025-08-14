@@ -16,7 +16,7 @@
 	"elements": [
 		{
 			"name": "saddlebag_right",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -62,7 +62,7 @@
 		},
 		{
 			"name": "saddlebag_left",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -107,7 +107,7 @@
 		},
 		{
 			"name": "storage_back",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -328,7 +328,7 @@
 		},
 		{
 			"name": "body",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -372,7 +372,7 @@
 		},
 		{
 			"name": "wing_left",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -417,7 +417,7 @@
 		},
 		{
 			"name": "wing_right",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -462,7 +462,7 @@
 		},
 		{
 			"name": "chest",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -507,7 +507,7 @@
 		},
 		{
 			"name": "neck",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -552,7 +552,7 @@
 		},
 		{
 			"name": "head",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -682,7 +682,7 @@
 		},
 		{
 			"name": "leg_left_lower",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -726,7 +726,7 @@
 		},
 		{
 			"name": "leg_left_upper",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -770,7 +770,7 @@
 		},
 		{
 			"name": "foot_left",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -814,7 +814,7 @@
 		},
 		{
 			"name": "toe_right",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -858,7 +858,7 @@
 		},
 		{
 			"name": "toe_left",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -902,7 +902,7 @@
 		},
 		{
 			"name": "leg_right_lower",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -946,7 +946,7 @@
 		},
 		{
 			"name": "leg_right_upper",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -990,7 +990,7 @@
 		},
 		{
 			"name": "foot_right",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -1034,7 +1034,7 @@
 		},
 		{
 			"name": "toe_right",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -1078,7 +1078,7 @@
 		},
 		{
 			"name": "toe_left",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
@@ -1165,7 +1165,7 @@
 		},
 		{
 			"name": "saddle",
-			"box_uv": true,
+			"box_uv": false,
 			"rescale": false,
 			"locked": false,
 			"light_emission": 0,
