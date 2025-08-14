@@ -171,24 +171,24 @@
 					"texture": 0
 				},
 				"east": {
-					"uv": [108, 29, 108, 35],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"south": {
 					"uv": [108, 29, 115, 35],
 					"texture": 0
 				},
 				"west": {
-					"uv": [115, 29, 115, 35],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"up": {
-					"uv": [115, 29, 108, 29],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [122, 29, 115, 29],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -215,24 +215,24 @@
 					"texture": 0
 				},
 				"east": {
-					"uv": [66, 25, 66, 35],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"south": {
 					"uv": [66, 25, 77, 35],
 					"texture": 0
 				},
 				"west": {
-					"uv": [77, 25, 77, 35],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"up": {
-					"uv": [77, 25, 66, 25],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [88, 25, 77, 25],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -255,28 +255,28 @@
 			"uv_offset": [45, 28],
 			"faces": {
 				"north": {
-					"uv": [54, 37, 54, 51],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
 					"uv": [63, 37, 54, 51],
 					"texture": 0
 				},
 				"south": {
-					"uv": [63, 37, 63, 51],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
 					"uv": [54, 37, 63, 51],
 					"texture": 0
 				},
 				"up": {
-					"uv": [54, 37, 54, 28],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [54, 28, 54, 37],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -299,28 +299,28 @@
 			"uv_offset": [45, 28],
 			"faces": {
 				"north": {
-					"uv": [54, 37, 54, 51],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
 					"uv": [63, 37, 54, 51],
 					"texture": 0
 				},
 				"south": {
-					"uv": [63, 37, 63, 51],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
 					"uv": [54, 37, 63, 51],
 					"texture": 0
 				},
 				"up": {
-					"uv": [54, 37, 54, 28],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [54, 28, 54, 37],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -609,28 +609,28 @@
 			"uv_offset": [2, 2],
 			"faces": {
 				"north": {
-					"uv": [6, 6, 6, 12],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
 					"uv": [10, 6, 6, 12],
 					"texture": 0
 				},
 				"south": {
-					"uv": [10, 6, 10, 12],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
 					"uv": [6, 6, 10, 12],
 					"texture": 0
 				},
 				"up": {
-					"uv": [6, 6, 6, 2],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [6, 2, 6, 6],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -653,28 +653,28 @@
 			"uv_offset": [2, 2],
 			"faces": {
 				"north": {
-					"uv": [6, 6, 6, 12],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
 					"uv": [10, 6, 6, 12],
 					"texture": 0
 				},
 				"south": {
-					"uv": [10, 6, 10, 12],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
 					"uv": [6, 6, 10, 12],
 					"texture": 0
 				},
 				"up": {
-					"uv": [6, 6, 6, 2],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [6, 2, 6, 6],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -1136,20 +1136,20 @@
 			"uv_offset": [20, 0],
 			"faces": {
 				"north": {
-					"uv": [26, 6, 31, 6],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
-					"uv": [20, 6, 26, 6],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"south": {
-					"uv": [37, 6, 42, 6],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
-					"uv": [31, 6, 37, 6],
-					"texture": 0
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"up": {
 					"uv": [36, 6, 31, 0],
@@ -1229,24 +1229,24 @@
 					"texture": 1
 				},
 				"east": {
-					"uv": [108, 29, 108, 35],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"south": {
 					"uv": [108, 29, 115, 35],
 					"texture": 1
 				},
 				"west": {
-					"uv": [115, 29, 115, 35],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"up": {
-					"uv": [115, 29, 108, 29],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [122, 29, 115, 29],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -1273,24 +1273,24 @@
 					"texture": 1
 				},
 				"east": {
-					"uv": [66, 25, 66, 35],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"south": {
 					"uv": [66, 25, 77, 35],
 					"texture": 1
 				},
 				"west": {
-					"uv": [77, 25, 77, 35],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"up": {
-					"uv": [77, 25, 66, 25],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [88, 25, 77, 25],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -1313,28 +1313,28 @@
 			"uv_offset": [45, 28],
 			"faces": {
 				"north": {
-					"uv": [54, 37, 54, 51],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
 					"uv": [63, 37, 54, 51],
 					"texture": 1
 				},
 				"south": {
-					"uv": [63, 37, 63, 51],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
 					"uv": [54, 37, 63, 51],
 					"texture": 1
 				},
 				"up": {
-					"uv": [54, 37, 54, 28],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [54, 28, 54, 37],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
@@ -1357,28 +1357,28 @@
 			"uv_offset": [45, 28],
 			"faces": {
 				"north": {
-					"uv": [54, 37, 54, 51],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"east": {
 					"uv": [63, 37, 54, 51],
 					"texture": 1
 				},
 				"south": {
-					"uv": [63, 37, 63, 51],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"west": {
 					"uv": [54, 37, 63, 51],
 					"texture": 1
 				},
 				"up": {
-					"uv": [54, 37, 54, 28],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				},
 				"down": {
-					"uv": [54, 28, 54, 37],
-					"texture": 1
+					"uv": [0, 0, 0, 0],
+					"texture": null
 				}
 			},
 			"type": "cube",
