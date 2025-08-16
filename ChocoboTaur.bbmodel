@@ -15,7 +15,7 @@
 	},
 	"elements": [
 		{
-			"name": "saddlebag_right",
+			"name": "RightSaddlebag",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -60,7 +60,7 @@
 			"uuid": "6f795577-9b51-5a64-8df5-2a7ce1aacd1a"
 		},
 		{
-			"name": "saddlebag_left",
+			"name": "LeftSaddlebag",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -104,7 +104,7 @@
 			"uuid": "341dcc17-d030-f998-58f2-474b4f48cfa8"
 		},
 		{
-			"name": "storage_back",
+			"name": "Storage",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -148,7 +148,7 @@
 			"uuid": "00e7dd48-cc8d-6963-cf94-ffebcf99eab7"
 		},
 		{
-			"name": "fan_bottom",
+			"name": "Feathers",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -191,7 +191,7 @@
 			"uuid": "d0e3cbb9-ba14-e29f-eba1-c87c8faa25cc"
 		},
 		{
-			"name": "fan_top",
+			"name": "Feathers",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -234,7 +234,7 @@
 			"uuid": "c98089e6-e367-61ee-3d0b-07b42817450f"
 		},
 		{
-			"name": "fan_right",
+			"name": "Feathers",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -277,7 +277,7 @@
 			"uuid": "43d77fcb-218e-8fcd-f78c-856b86cbf347"
 		},
 		{
-			"name": "fan_left",
+			"name": "Feathers",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -320,7 +320,7 @@
 			"uuid": "dc37bc69-f244-10eb-ed4d-5a8591a3fb4f"
 		},
 		{
-			"name": "body",
+			"name": "Torso",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -363,7 +363,7 @@
 			"uuid": "822fed29-60b2-a471-e6f0-0be50f659057"
 		},
 		{
-			"name": "wing_left",
+			"name": "Wing",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -407,7 +407,7 @@
 			"uuid": "2cb22eb5-4e51-0944-f3c3-409d893e6288"
 		},
 		{
-			"name": "wing_right",
+			"name": "Wing",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -451,7 +451,7 @@
 			"uuid": "a0a73fe1-440a-6449-aa09-2c626d723c85"
 		},
 		{
-			"name": "chest",
+			"name": "Neck",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -495,7 +495,7 @@
 			"uuid": "0aaa5914-f3ad-2e04-7c44-c9e07da3377d"
 		},
 		{
-			"name": "neck",
+			"name": "Neck",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -539,7 +539,7 @@
 			"uuid": "bcbd18e0-f236-3519-ac56-f73e93fc0c07"
 		},
 		{
-			"name": "head",
+			"name": "Head",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -581,7 +581,7 @@
 			"uuid": "526a6b47-a05e-9d09-7369-221176e0657b"
 		},
 		{
-			"name": "crest_right",
+			"name": "Crest",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -624,7 +624,7 @@
 			"uuid": "1978ecd6-e3ab-9cf5-e45f-413d81c545f3"
 		},
 		{
-			"name": "crest_left",
+			"name": "Crest",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -667,7 +667,7 @@
 			"uuid": "0ef6625e-9b8c-a748-c483-e39aef3f1e5f"
 		},
 		{
-			"name": "leg_left_lower",
+			"name": "Leg",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -710,7 +710,7 @@
 			"uuid": "a6bc5b4c-6a04-3b8b-005a-f4614e3a1bf5"
 		},
 		{
-			"name": "leg_left_upper",
+			"name": "Leg",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -753,7 +753,7 @@
 			"uuid": "33ebef7d-d63c-4505-8752-78a8040ef80e"
 		},
 		{
-			"name": "foot_left",
+			"name": "Spur",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -796,7 +796,7 @@
 			"uuid": "826c80bd-1d69-bef2-af67-9d10dd915e8b"
 		},
 		{
-			"name": "toe_right",
+			"name": "Toe",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -839,7 +839,7 @@
 			"uuid": "775dbb32-d8e5-dea5-822f-96c5968d8ed6"
 		},
 		{
-			"name": "toe_left",
+			"name": "Toe",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -882,7 +882,7 @@
 			"uuid": "177cd97f-f6b5-9e61-1d18-6b9a68e32bad"
 		},
 		{
-			"name": "leg_right_lower",
+			"name": "Leg",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -925,7 +925,7 @@
 			"uuid": "cba261e5-c3c3-4030-abff-19cc4b4340fd"
 		},
 		{
-			"name": "leg_right_upper",
+			"name": "Leg",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -968,7 +968,7 @@
 			"uuid": "5c19df67-ee12-d821-207c-9bfb85197b24"
 		},
 		{
-			"name": "foot_right",
+			"name": "Spur",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1011,7 +1011,7 @@
 			"uuid": "78a1e63b-5759-ead7-2517-437727fda1d5"
 		},
 		{
-			"name": "toe_right",
+			"name": "Toe",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1054,7 +1054,7 @@
 			"uuid": "e398a82d-d48b-51e0-d5fc-e54034d52ddb"
 		},
 		{
-			"name": "toe_left",
+			"name": "Toe",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1097,7 +1097,7 @@
 			"uuid": "70c0a88a-c53c-250e-9bbd-40ee090e9994"
 		},
 		{
-			"name": "crest_top",
+			"name": "Crest",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1140,7 +1140,7 @@
 			"uuid": "e434f088-ef75-4c22-9bfb-a22b844d0928"
 		},
 		{
-			"name": "saddle",
+			"name": "Saddle",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1184,7 +1184,7 @@
 			"uuid": "c99501fb-cc8e-0593-02dd-80594b017b88"
 		},
 		{
-			"name": "fan_bottom_plumage",
+			"name": "Plumage",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1227,7 +1227,7 @@
 			"uuid": "78882c4c-a424-6ec6-7a1f-b2de0c16d4fe"
 		},
 		{
-			"name": "fan_top_plumage",
+			"name": "Plumage",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1270,7 +1270,7 @@
 			"uuid": "6dfe5367-aee8-cbf7-748f-9638677a7b6e"
 		},
 		{
-			"name": "fan_right_plumage",
+			"name": "Plumage",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1313,7 +1313,7 @@
 			"uuid": "c1d48169-f6bb-30c6-79bc-6c6be49328ae"
 		},
 		{
-			"name": "fan_left_plumage",
+			"name": "Plumage",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1358,7 +1358,7 @@
 	],
 	"outliner": [
 		{
-			"name": "root",
+			"name": "Player",
 			"origin": [0, 0, 0],
 			"color": 0,
 			"uuid": "4f173123-5da5-a635-93d2-2b8bd40b0caa",
@@ -1371,7 +1371,7 @@
 			"selected": false,
 			"children": [
 				{
-					"name": "body",
+					"name": "Torso",
 					"origin": [0, 22, -1],
 					"rotation": [5, 0, 0],
 					"color": 0,
@@ -1386,7 +1386,7 @@
 					"children": [
 						"822fed29-60b2-a471-e6f0-0be50f659057",
 						{
-							"name": "chest",
+							"name": "Neck",
 							"origin": [0, 26, -5],
 							"rotation": [-50, 0, 0],
 							"color": 0,
@@ -1401,7 +1401,7 @@
 							"children": [
 								"0aaa5914-f3ad-2e04-7c44-c9e07da3377d",
 								{
-									"name": "neck",
+									"name": "Neck2",
 									"origin": [0, 30, -6],
 									"rotation": [52.5, 0, 0],
 									"color": 0,
@@ -1416,7 +1416,7 @@
 									"children": [
 										"bcbd18e0-f236-3519-ac56-f73e93fc0c07",
 										{
-											"name": "head",
+											"name": "Head",
 											"origin": [0, 42, -6],
 											"rotation": [-7.5, 0, 0],
 											"color": 0,
@@ -1431,7 +1431,7 @@
 											"children": [
 												"526a6b47-a05e-9d09-7369-221176e0657b",
 												{
-													"name": "crests",
+													"name": "Crests",
 													"origin": [0, 44, -4],
 													"color": 0,
 													"uuid": "05ea0e13-59ef-431b-fcaf-d8f0c8e1354c",
@@ -1444,7 +1444,7 @@
 													"selected": false,
 													"children": [
 														{
-															"name": "crest_top",
+															"name": "TopCrest",
 															"origin": [0, 47, -4],
 															"color": 0,
 															"uuid": "1e59fb5a-a121-dfda-c106-ab03090d26bb",
@@ -1458,7 +1458,7 @@
 															"children": ["e434f088-ef75-4c22-9bfb-a22b844d0928"]
 														},
 														{
-															"name": "crest_left",
+															"name": "LeftCrest",
 															"origin": [-3, 44, -4],
 															"rotation": [0, -12.5, 0],
 															"color": 0,
@@ -1473,7 +1473,7 @@
 															"children": ["0ef6625e-9b8c-a748-c483-e39aef3f1e5f"]
 														},
 														{
-															"name": "crest_right",
+															"name": "RightCrest",
 															"origin": [3, 44, -4],
 															"rotation": [0, 12.5, 0],
 															"color": 0,
@@ -1496,7 +1496,7 @@
 							]
 						},
 						{
-							"name": "legs",
+							"name": "Legs",
 							"origin": [0, 19, 2],
 							"color": 0,
 							"uuid": "057beb51-a3e9-0943-92bd-9d4b11c1a619",
@@ -1509,7 +1509,7 @@
 							"selected": false,
 							"children": [
 								{
-									"name": "leg_left",
+									"name": "UpperLeftLeg",
 									"origin": [-3.5, 19, 2],
 									"rotation": [-20, 0, 0],
 									"color": 0,
@@ -1524,7 +1524,7 @@
 									"children": [
 										"33ebef7d-d63c-4505-8752-78a8040ef80e",
 										{
-											"name": "leg_left2",
+											"name": "LowerLeftLeg",
 											"origin": [-3.5, 10, 3],
 											"rotation": [37.5, 0, 0],
 											"color": 0,
@@ -1539,7 +1539,7 @@
 											"children": [
 												"a6bc5b4c-6a04-3b8b-005a-f4614e3a1bf5",
 												{
-													"name": "foot_left",
+													"name": "LeftFoot",
 													"origin": [-3.5, 0, 2.75],
 													"color": 0,
 													"uuid": "d397056f-68e4-4545-63ba-fba292cf903e",
@@ -1552,7 +1552,7 @@
 													"selected": false,
 													"children": [
 														{
-															"name": "foot_left_toe_left",
+															"name": "LeftFootLeftToe",
 															"origin": [-4, 1, 3],
 															"rotation": [-35, 15, -5],
 															"color": 0,
@@ -1567,7 +1567,7 @@
 															"children": ["177cd97f-f6b5-9e61-1d18-6b9a68e32bad"]
 														},
 														{
-															"name": "foot_left_toe_right",
+															"name": "LeftFootRightToe",
 															"origin": [-3, 1, 3],
 															"rotation": [-35, -15, 5],
 															"color": 0,
@@ -1582,7 +1582,7 @@
 															"children": ["775dbb32-d8e5-dea5-822f-96c5968d8ed6"]
 														},
 														{
-															"name": "foot_left_spur",
+															"name": "LeftFootSpur",
 															"origin": [-3.5, -0.5, 3.25],
 															"rotation": [-22.5, 12.5, -5],
 															"color": 0,
@@ -1603,7 +1603,7 @@
 									]
 								},
 								{
-									"name": "leg_right",
+									"name": "UpperRightLeg",
 									"origin": [3.5, 19, 2],
 									"rotation": [-20, 0, 0],
 									"color": 0,
@@ -1618,7 +1618,7 @@
 									"children": [
 										"5c19df67-ee12-d821-207c-9bfb85197b24",
 										{
-											"name": "leg_right2",
+											"name": "LowerRightLeg",
 											"origin": [3.5, 10, 3],
 											"rotation": [37.5, 0, 0],
 											"color": 0,
@@ -1633,7 +1633,7 @@
 											"children": [
 												"cba261e5-c3c3-4030-abff-19cc4b4340fd",
 												{
-													"name": "foot_right",
+													"name": "RightFoot",
 													"origin": [3.5, 0, 2.75],
 													"color": 0,
 													"uuid": "1f70fa4b-8e0f-53cd-2d85-4d97f44c39e2",
@@ -1646,7 +1646,7 @@
 													"selected": false,
 													"children": [
 														{
-															"name": "foot_right_toe_left",
+															"name": "RightFootLeftToe",
 															"origin": [3, 1, 3],
 															"rotation": [-35, 15, -5],
 															"color": 0,
@@ -1661,7 +1661,7 @@
 															"children": ["70c0a88a-c53c-250e-9bbd-40ee090e9994"]
 														},
 														{
-															"name": "foot_right_toe_right",
+															"name": "RightFootRightToe",
 															"origin": [4, 1, 3],
 															"rotation": [-35, -15, 5],
 															"color": 0,
@@ -1676,7 +1676,7 @@
 															"children": ["e398a82d-d48b-51e0-d5fc-e54034d52ddb"]
 														},
 														{
-															"name": "foot_right_spur",
+															"name": "RightFootSpur",
 															"origin": [3.5, -0.5, 3.25],
 															"rotation": [-22.5, -12.5, 5],
 															"color": 0,
@@ -1699,7 +1699,7 @@
 							]
 						},
 						{
-							"name": "wings",
+							"name": "Wings",
 							"origin": [0, 27, -2],
 							"color": 0,
 							"uuid": "368264b4-173d-846f-98d0-ca86e3ca1185",
@@ -1712,7 +1712,7 @@
 							"selected": false,
 							"children": [
 								{
-									"name": "wing_left",
+									"name": "LeftWing",
 									"origin": [-6, 27, -2],
 									"rotation": [-2.5, -2.5, -5],
 									"color": 0,
@@ -1727,7 +1727,7 @@
 									"children": ["2cb22eb5-4e51-0944-f3c3-409d893e6288"]
 								},
 								{
-									"name": "wing_right",
+									"name": "RightWing",
 									"origin": [6, 27, -2],
 									"rotation": [-2.5, 2.5, 5],
 									"color": 0,
@@ -1744,7 +1744,7 @@
 							]
 						},
 						{
-							"name": "fans",
+							"name": "Feathers",
 							"origin": [0, 25, 9],
 							"color": 0,
 							"uuid": "47896ab7-9dec-aacf-4884-428e74848c96",
@@ -1757,7 +1757,7 @@
 							"selected": false,
 							"children": [
 								{
-									"name": "fan_top",
+									"name": "TopFeathers",
 									"origin": [0, 29, 9],
 									"rotation": [27.5, 0, 0],
 									"color": 0,
@@ -1772,7 +1772,7 @@
 									"children": ["c98089e6-e367-61ee-3d0b-07b42817450f", "6dfe5367-aee8-cbf7-748f-9638677a7b6e"]
 								},
 								{
-									"name": "fan_left",
+									"name": "LeftFeathers",
 									"origin": [-3, 24, 9],
 									"rotation": [2.5, -42.5, 7.5],
 									"color": 0,
@@ -1787,7 +1787,7 @@
 									"children": ["dc37bc69-f244-10eb-ed4d-5a8591a3fb4f", "4d02b60e-d2f4-a235-6d98-b74e162683fb"]
 								},
 								{
-									"name": "fan_right",
+									"name": "RightFeathers",
 									"origin": [3, 24, 9],
 									"rotation": [2.5, 42.5, -7.5],
 									"color": 0,
@@ -1802,7 +1802,7 @@
 									"children": ["43d77fcb-218e-8fcd-f78c-856b86cbf347", "c1d48169-f6bb-30c6-79bc-6c6be49328ae"]
 								},
 								{
-									"name": "fan_bottom",
+									"name": "BottomFeathers",
 									"origin": [0, 22, 9],
 									"rotation": [47.5, 0, 0],
 									"color": 0,
@@ -1819,7 +1819,7 @@
 							]
 						},
 						{
-							"name": "saddles",
+							"name": "Saddles",
 							"origin": [0, 32, 6],
 							"color": 0,
 							"uuid": "1dcc4b5d-fa3e-77bc-6517-14c7754e5f69",
