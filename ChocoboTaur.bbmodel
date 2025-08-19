@@ -1828,6 +1828,135 @@
 			},
 			"type": "cube",
 			"uuid": "6fe68fa6-b0a5-0e21-b4bb-8c9d4d95cb5d"
+		},
+		{
+			"name": "Plumage_Flat",
+			"box_uv": false,
+			"rescale": false,
+			"locked": false,
+			"light_emission": 0,
+			"render_order": "default",
+			"allow_mirror_modeling": true,
+			"from": [-3.5, 53, -3.5],
+			"to": [3.5, 53, 3.5],
+			"autouv": 0,
+			"color": 0,
+			"origin": [0, 0, 0],
+			"uv_offset": [20, 0],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"east": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"south": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"west": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"up": {
+					"uv": [14, 18, 7, 11],
+					"texture": 2
+				},
+				"down": {
+					"uv": [7, 11, 14, 18],
+					"texture": 2
+				}
+			},
+			"type": "cube",
+			"uuid": "1448f8bb-8177-9016-585e-75986b2963db"
+		},
+		{
+			"name": "Plumage_Flat",
+			"box_uv": false,
+			"rescale": false,
+			"locked": false,
+			"light_emission": 0,
+			"render_order": "default",
+			"allow_mirror_modeling": true,
+			"from": [-4, 45, -3.5],
+			"to": [-4, 53, 0.5],
+			"autouv": 0,
+			"color": 0,
+			"origin": [0, 0, 0],
+			"uv_offset": [2, 2],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"east": {
+					"uv": [3, 10, 7, 18],
+					"texture": 2
+				},
+				"south": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"west": {
+					"uv": [7, 10, 3, 18],
+					"texture": 2
+				},
+				"up": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"down": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				}
+			},
+			"type": "cube",
+			"uuid": "680717b9-1045-b1db-02e6-3e2eacd8e8e0"
+		},
+		{
+			"name": "Plumage_Flat",
+			"box_uv": false,
+			"rescale": false,
+			"locked": false,
+			"light_emission": 0,
+			"render_order": "default",
+			"allow_mirror_modeling": true,
+			"from": [4, 45, -3.5],
+			"to": [4, 53, 0.5],
+			"autouv": 0,
+			"color": 0,
+			"origin": [0, 0, 0],
+			"uv_offset": [2, 2],
+			"faces": {
+				"north": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"east": {
+					"uv": [18, 10, 14, 18],
+					"texture": 2
+				},
+				"south": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"west": {
+					"uv": [14, 10, 18, 18],
+					"texture": 2
+				},
+				"up": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				},
+				"down": {
+					"uv": [0, 0, 0, 0],
+					"texture": null
+				}
+			},
+			"type": "cube",
+			"uuid": "d4bc2046-755f-6c2f-8287-8d771bfde146"
 		}
 	],
 	"outliner": [
@@ -1928,7 +2057,7 @@
 															"visibility": true,
 															"autouv": 0,
 															"selected": false,
-															"children": ["e434f088-ef75-4c22-9bfb-a22b844d0928"]
+															"children": ["e434f088-ef75-4c22-9bfb-a22b844d0928", "1448f8bb-8177-9016-585e-75986b2963db"]
 														},
 														{
 															"name": "LeftCrest",
@@ -1943,7 +2072,7 @@
 															"visibility": true,
 															"autouv": 0,
 															"selected": false,
-															"children": ["0ef6625e-9b8c-a748-c483-e39aef3f1e5f"]
+															"children": ["0ef6625e-9b8c-a748-c483-e39aef3f1e5f", "680717b9-1045-b1db-02e6-3e2eacd8e8e0"]
 														},
 														{
 															"name": "RightCrest",
@@ -1958,7 +2087,7 @@
 															"visibility": true,
 															"autouv": 0,
 															"selected": false,
-															"children": ["1978ecd6-e3ab-9cf5-e45f-413d81c545f3"]
+															"children": ["1978ecd6-e3ab-9cf5-e45f-413d81c545f3", "d4bc2046-755f-6c2f-8287-8d771bfde146"]
 														}
 													]
 												},
