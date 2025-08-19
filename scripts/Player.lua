@@ -21,6 +21,12 @@ for _, type in pairs(layerTypes) do
 	layerParts[type] = parts:createTable(function(part) return part:getName():find(type) end)
 end
 
+-- Apply translucent cull
+local flatParts = parts:createTable(function(part) return part:getName():find("_[fF]lat") end)
+for _, part in ipairs(flatParts) do
+	part:primaryRenderType("TRANSLUCENT_CULL")
+end
+
 -- Determine vanilla player type on init
 local vanillaAvatarType
 function events.ENTITY_INIT()

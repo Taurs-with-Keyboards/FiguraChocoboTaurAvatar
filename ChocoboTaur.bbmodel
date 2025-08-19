@@ -148,7 +148,7 @@
 			"uuid": "00e7dd48-cc8d-6963-cf94-ffebcf99eab7"
 		},
 		{
-			"name": "Feathers",
+			"name": "Feathers_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -191,7 +191,7 @@
 			"uuid": "d0e3cbb9-ba14-e29f-eba1-c87c8faa25cc"
 		},
 		{
-			"name": "Feathers",
+			"name": "Feathers_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -234,7 +234,7 @@
 			"uuid": "c98089e6-e367-61ee-3d0b-07b42817450f"
 		},
 		{
-			"name": "Feathers",
+			"name": "Feathers_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -277,7 +277,7 @@
 			"uuid": "43d77fcb-218e-8fcd-f78c-856b86cbf347"
 		},
 		{
-			"name": "Feathers",
+			"name": "Feathers_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -495,7 +495,7 @@
 			"uuid": "0aaa5914-f3ad-2e04-7c44-c9e07da3377d"
 		},
 		{
-			"name": "Crest",
+			"name": "Crest_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -538,7 +538,7 @@
 			"uuid": "1978ecd6-e3ab-9cf5-e45f-413d81c545f3"
 		},
 		{
-			"name": "Crest",
+			"name": "Crest_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1011,7 +1011,7 @@
 			"uuid": "70c0a88a-c53c-250e-9bbd-40ee090e9994"
 		},
 		{
-			"name": "Crest",
+			"name": "Crest_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1098,7 +1098,7 @@
 			"uuid": "c99501fb-cc8e-0593-02dd-80594b017b88"
 		},
 		{
-			"name": "Plumage",
+			"name": "Plumage_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1141,7 +1141,7 @@
 			"uuid": "78882c4c-a424-6ec6-7a1f-b2de0c16d4fe"
 		},
 		{
-			"name": "Plumage",
+			"name": "Plumage_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1184,7 +1184,7 @@
 			"uuid": "6dfe5367-aee8-cbf7-748f-9638677a7b6e"
 		},
 		{
-			"name": "Plumage",
+			"name": "Plumage_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1227,7 +1227,7 @@
 			"uuid": "c1d48169-f6bb-30c6-79bc-6c6be49328ae"
 		},
 		{
-			"name": "Plumage",
+			"name": "Plumage_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
