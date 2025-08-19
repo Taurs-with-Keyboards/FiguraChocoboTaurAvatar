@@ -15,7 +15,7 @@
 	},
 	"elements": [
 		{
-			"name": "RightSaddlebag",
+			"name": "Right",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -60,7 +60,7 @@
 			"uuid": "6f795577-9b51-5a64-8df5-2a7ce1aacd1a"
 		},
 		{
-			"name": "LeftSaddlebag",
+			"name": "Left",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -2734,8 +2734,20 @@
 							"selected": false,
 							"children": [
 								"c99501fb-cc8e-0593-02dd-80594b017b88",
-								"341dcc17-d030-f998-58f2-474b4f48cfa8",
-								"6f795577-9b51-5a64-8df5-2a7ce1aacd1a",
+								{
+									"name": "Saddlebags",
+									"origin": [0, 0, 0],
+									"color": 0,
+									"uuid": "9307d641-9512-9a7b-1b39-e631a91a05f7",
+									"export": true,
+									"mirror_uv": false,
+									"isOpen": true,
+									"locked": false,
+									"visibility": true,
+									"autouv": 0,
+									"selected": false,
+									"children": ["341dcc17-d030-f998-58f2-474b4f48cfa8", "6f795577-9b51-5a64-8df5-2a7ce1aacd1a"]
+								},
 								"00e7dd48-cc8d-6963-cf94-ffebcf99eab7"
 							]
 						}
