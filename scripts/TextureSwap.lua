@@ -56,23 +56,33 @@ if tex > #texs then
 	tex = 1
 end
 
+-- Variables
+local _tex = nil
+
 -- Texture parts
 local texParts = parts:createTable(function(part) return part:getName():find("_[sS]wap") end)
 
 function events.RENDER(delta, context)
 	
-	-- Apply textures
-	for _, part in ipairs(texParts) do
+	if tex ~= _tex then
 		
-		part:primaryTexture("CUSTOM", texs[tex].tex)
+		-- Apply textures
+		for _, part in ipairs(texParts) do
+			
+			part:primaryTexture("CUSTOM", texs[tex].tex)
+			
+		end
+		
+		-- Glowing outline
+		renderer:outlineColor(texs[tex].color)
+		
+		-- Avatar color
+		avatar:color(texs[tex].color)
 		
 	end
 	
-	-- Glowing outline
-	renderer:outlineColor(texs[tex].color)
-	
-	-- Avatar color
-	avatar:color(texs[tex].color)
+	-- Store data
+	_tex = tex
 	
 end
 
