@@ -33,27 +33,27 @@
 			"faces": {
 				"north": {
 					"uv": [51, 9, 53, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"east": {
 					"uv": [44, 9, 51, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"south": {
 					"uv": [60, 9, 62, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"west": {
 					"uv": [53, 9, 60, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"up": {
 					"uv": [53, 9, 51, 2],
-					"texture": 4
+					"texture": 13
 				},
 				"down": {
 					"uv": [55, 2, 53, 9],
-					"texture": 4
+					"texture": 13
 				}
 			},
 			"type": "cube",
@@ -77,27 +77,27 @@
 			"faces": {
 				"north": {
 					"uv": [7, 9, 9, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"east": {
 					"uv": [0, 9, 7, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"south": {
 					"uv": [16, 9, 18, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"west": {
 					"uv": [9, 9, 16, 18],
-					"texture": 4
+					"texture": 13
 				},
 				"up": {
 					"uv": [9, 9, 7, 2],
-					"texture": 4
+					"texture": 13
 				},
 				"down": {
 					"uv": [11, 2, 9, 9],
-					"texture": 4
+					"texture": 13
 				}
 			},
 			"type": "cube",
@@ -121,34 +121,34 @@
 			"faces": {
 				"north": {
 					"uv": [20, 43, 31, 50],
-					"texture": 5
+					"texture": 14
 				},
 				"east": {
 					"uv": [7, 43, 20, 50],
-					"texture": 5
+					"texture": 14
 				},
 				"south": {
 					"uv": [44, 43, 55, 50],
-					"texture": 5
+					"texture": 14
 				},
 				"west": {
 					"uv": [31, 43, 44, 50],
-					"texture": 5
+					"texture": 14
 				},
 				"up": {
 					"uv": [31, 43, 20, 30],
-					"texture": 5
+					"texture": 14
 				},
 				"down": {
 					"uv": [42, 30, 31, 43],
-					"texture": 5
+					"texture": 14
 				}
 			},
 			"type": "cube",
 			"uuid": "00e7dd48-cc8d-6963-cf94-ffebcf99eab7"
 		},
 		{
-			"name": "Feathers_Flat",
+			"name": "Feathers_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -191,7 +191,7 @@
 			"uuid": "d0e3cbb9-ba14-e29f-eba1-c87c8faa25cc"
 		},
 		{
-			"name": "Feathers_Flat",
+			"name": "Feathers_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -234,7 +234,7 @@
 			"uuid": "c98089e6-e367-61ee-3d0b-07b42817450f"
 		},
 		{
-			"name": "Feathers_Flat",
+			"name": "Feathers_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -277,7 +277,7 @@
 			"uuid": "43d77fcb-218e-8fcd-f78c-856b86cbf347"
 		},
 		{
-			"name": "Feathers_Flat",
+			"name": "Feathers_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -320,7 +320,7 @@
 			"uuid": "dc37bc69-f244-10eb-ed4d-5a8591a3fb4f"
 		},
 		{
-			"name": "Torso",
+			"name": "Torso_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -363,7 +363,7 @@
 			"uuid": "822fed29-60b2-a471-e6f0-0be50f659057"
 		},
 		{
-			"name": "Wing",
+			"name": "Wing_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -407,7 +407,7 @@
 			"uuid": "2cb22eb5-4e51-0944-f3c3-409d893e6288"
 		},
 		{
-			"name": "Wing",
+			"name": "Wing_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -451,7 +451,7 @@
 			"uuid": "a0a73fe1-440a-6449-aa09-2c626d723c85"
 		},
 		{
-			"name": "Neck",
+			"name": "Neck_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -495,7 +495,7 @@
 			"uuid": "0aaa5914-f3ad-2e04-7c44-c9e07da3377d"
 		},
 		{
-			"name": "Crest_Flat",
+			"name": "Crest_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -538,7 +538,7 @@
 			"uuid": "1978ecd6-e3ab-9cf5-e45f-413d81c545f3"
 		},
 		{
-			"name": "Crest_Flat",
+			"name": "Crest_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -581,7 +581,7 @@
 			"uuid": "0ef6625e-9b8c-a748-c483-e39aef3f1e5f"
 		},
 		{
-			"name": "Leg",
+			"name": "Leg_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -624,7 +624,7 @@
 			"uuid": "a6bc5b4c-6a04-3b8b-005a-f4614e3a1bf5"
 		},
 		{
-			"name": "Leg",
+			"name": "Leg_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -667,7 +667,7 @@
 			"uuid": "33ebef7d-d63c-4505-8752-78a8040ef80e"
 		},
 		{
-			"name": "Spur",
+			"name": "Spur_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -710,7 +710,7 @@
 			"uuid": "826c80bd-1d69-bef2-af67-9d10dd915e8b"
 		},
 		{
-			"name": "Toe",
+			"name": "Toe_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -753,7 +753,7 @@
 			"uuid": "775dbb32-d8e5-dea5-822f-96c5968d8ed6"
 		},
 		{
-			"name": "Toe",
+			"name": "Toe_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -796,7 +796,7 @@
 			"uuid": "177cd97f-f6b5-9e61-1d18-6b9a68e32bad"
 		},
 		{
-			"name": "Leg",
+			"name": "Leg_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -839,7 +839,7 @@
 			"uuid": "cba261e5-c3c3-4030-abff-19cc4b4340fd"
 		},
 		{
-			"name": "Leg",
+			"name": "Leg_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -882,7 +882,7 @@
 			"uuid": "5c19df67-ee12-d821-207c-9bfb85197b24"
 		},
 		{
-			"name": "Spur",
+			"name": "Spur_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -925,7 +925,7 @@
 			"uuid": "78a1e63b-5759-ead7-2517-437727fda1d5"
 		},
 		{
-			"name": "Toe",
+			"name": "Toe_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -968,7 +968,7 @@
 			"uuid": "e398a82d-d48b-51e0-d5fc-e54034d52ddb"
 		},
 		{
-			"name": "Toe",
+			"name": "Toe_Swap",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1011,7 +1011,7 @@
 			"uuid": "70c0a88a-c53c-250e-9bbd-40ee090e9994"
 		},
 		{
-			"name": "Crest_Flat",
+			"name": "Crest_Swap_Flat",
 			"box_uv": false,
 			"rescale": false,
 			"locked": false,
@@ -1071,27 +1071,27 @@
 			"faces": {
 				"north": {
 					"uv": [18, 18, 31, 30],
-					"texture": 3
+					"texture": 12
 				},
 				"east": {
 					"uv": [0, 18, 18, 30],
-					"texture": 3
+					"texture": 12
 				},
 				"south": {
 					"uv": [49, 18, 62, 30],
-					"texture": 3
+					"texture": 12
 				},
 				"west": {
 					"uv": [31, 18, 49, 30],
-					"texture": 3
+					"texture": 12
 				},
 				"up": {
 					"uv": [31, 18, 18, 0],
-					"texture": 3
+					"texture": 12
 				},
 				"down": {
 					"uv": [44, 0, 31, 18],
-					"texture": 3
+					"texture": 12
 				}
 			},
 			"type": "cube",
@@ -1114,7 +1114,7 @@
 			"faces": {
 				"north": {
 					"uv": [95, 18, 103, 25],
-					"texture": 2
+					"texture": 11
 				},
 				"east": {
 					"uv": [0, 0, 0, 0],
@@ -1122,7 +1122,7 @@
 				},
 				"south": {
 					"uv": [103, 18, 95, 25],
-					"texture": 2
+					"texture": 11
 				},
 				"west": {
 					"uv": [0, 0, 0, 0],
@@ -1157,7 +1157,7 @@
 			"faces": {
 				"north": {
 					"uv": [82, 18, 95, 29],
-					"texture": 2
+					"texture": 11
 				},
 				"east": {
 					"uv": [0, 0, 0, 0],
@@ -1165,7 +1165,7 @@
 				},
 				"south": {
 					"uv": [95, 18, 82, 29],
-					"texture": 2
+					"texture": 11
 				},
 				"west": {
 					"uv": [0, 0, 0, 0],
@@ -1204,7 +1204,7 @@
 				},
 				"east": {
 					"uv": [82, 18, 72, 33],
-					"texture": 2
+					"texture": 11
 				},
 				"south": {
 					"uv": [0, 0, 0, 0],
@@ -1212,7 +1212,7 @@
 				},
 				"west": {
 					"uv": [72, 18, 82, 33],
-					"texture": 2
+					"texture": 11
 				},
 				"up": {
 					"uv": [0, 0, 0, 0],
@@ -1247,7 +1247,7 @@
 				},
 				"east": {
 					"uv": [62, 18, 72, 33],
-					"texture": 2
+					"texture": 11
 				},
 				"south": {
 					"uv": [0, 0, 0, 0],
@@ -1255,7 +1255,7 @@
 				},
 				"west": {
 					"uv": [72, 18, 62, 33],
-					"texture": 2
+					"texture": 11
 				},
 				"up": {
 					"uv": [0, 0, 0, 0],
@@ -1862,11 +1862,11 @@
 				},
 				"up": {
 					"uv": [14, 18, 7, 11],
-					"texture": 2
+					"texture": 11
 				},
 				"down": {
 					"uv": [7, 11, 14, 18],
-					"texture": 2
+					"texture": 11
 				}
 			},
 			"type": "cube",
@@ -1893,7 +1893,7 @@
 				},
 				"east": {
 					"uv": [3, 10, 7, 18],
-					"texture": 2
+					"texture": 11
 				},
 				"south": {
 					"uv": [0, 0, 0, 0],
@@ -1901,7 +1901,7 @@
 				},
 				"west": {
 					"uv": [7, 10, 3, 18],
-					"texture": 2
+					"texture": 11
 				},
 				"up": {
 					"uv": [0, 0, 0, 0],
@@ -1936,7 +1936,7 @@
 				},
 				"east": {
 					"uv": [18, 10, 14, 18],
-					"texture": 2
+					"texture": 11
 				},
 				"south": {
 					"uv": [0, 0, 0, 0],
@@ -1944,7 +1944,7 @@
 				},
 				"west": {
 					"uv": [14, 10, 18, 18],
-					"texture": 2
+					"texture": 11
 				},
 				"up": {
 					"uv": [0, 0, 0, 0],
@@ -2813,7 +2813,268 @@
 			"saved": true,
 			"uuid": "d8643ae3-3d2d-d14c-69af-522bd4880fca",
 			"relative_path": "textures/yellowchocobo.png",
-			"source": "data:image/png;base64,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"
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\greenchocobo.png",
+			"name": "greenchocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "6",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "7501df4a-8711-7a94-4ac7-a2e1e3083162",
+			"relative_path": "textures/greenchocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\bluechocobo.png",
+			"name": "bluechocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "7",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "f74d8140-de32-0312-2676-acf36b9b4769",
+			"relative_path": "textures/bluechocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\whitechocobo.png",
+			"name": "whitechocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "8",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "9a415be3-d998-a648-c22b-78f55861f221",
+			"relative_path": "textures/whitechocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\blackchocobo.png",
+			"name": "blackchocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "9",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "2fd8bad8-14d9-53a6-0326-748f6e0cc038",
+			"relative_path": "textures/blackchocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\goldchocobo.png",
+			"name": "goldchocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "10",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "58e56c67-2612-8fe1-0c8b-3993e7a3b8a6",
+			"relative_path": "textures/goldchocobo.png",
+			"source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAABACAYAAADS1n9/AAAAAXNSR0IArs4c6QAAC/BJREFUeF7tXDuMHEUQnRMmguUOEgO2IEE2mPDAEAIGQiIikIUJQYIAISFEgAgQQiIyEoQYWTiCBETCx1hEYHxkGM5AADIfE4CP5SdhdOi1943flrune3Zq78br3WR3Z3pqerpeva6qrp6Fyulz9MCN61uvXawGS4OsxOHpYXXqx7Xq+y9/zra1De5/8fRC64vmFyRHwG0wv3vvtvUS5bMnAMFnH67WHRue+i/ZycHWS+pzOQAAiGs/DZOyFq8ZFAEvd59ZwZQrADAoJSCA8vEhAJqUz4EmCHKKef+Fbeu8Zu30n7WeFpcuq3/zeOy+pfeZA8CMwK9H764HvnRwDr91LDT1BAAZAEpWuVAsQEAGyDFODmilz9j3dm4M0CcAYNAxDVgGgPLxge8xB8BZaLoBYFIfoMT6dRrIWSYYIGd1cwCcG6GZBACiEUQZ9sPjcwBMAQBtpgB1AqfFAFB2zRxLg4qhJ6eAlO8xdwJz/Jk4jymgNAqgCDiB0wAAla8RCUFXmn/ITTUTDlPvLrvgpoDrbro6O4iphJSyQE5ILpewe99XbmOX68s0z0cfAtYMS2l6SGb+rr/30yBjo5xAAuCGXdvHxuWb4yfr/5YBaP1ooL5BkwwKYxsLnpkFABR5YuVkCKGaaPDNp5bWEVfvWN5eAQRtpoAuPgAAYBUHZVkAQNHqB/B/EwBUTo5FZhYAtOZJGKDUB+gKACpHLZvWDepmvG8BgDY8r+fYb7XyixYAKQYA5SvqN5MBqBy1eioXzGX9BA0LEQIyI6hzCFjFAsACWh3JmWYAPDgTKnhQzvdkBT3HQaQPgEGC922tU62M5ydZC4gpj33g6mKqjWYHU85kikHYZ04hMw0AsgAGVumUD08PmfM/pw3rZKW8V9LvJAAIfRot7NhUL/P/jOVTC0BcF4gtFuFYE8jINPc8/cPsRgFkACoaICCN6jG1AjqBAEkuhLIAwP1yuXmCCe2277wiOKn2GiiWx3QJWa8NTCTteI6gOLn6ezgPEBAMbMP/OQc5Bfw+Hm9EsS6tAgSqWGsBBAAiiGAlidU4nANz4KP1AKWDAwXHFBi7XkFQknCKASjGNrjXrCSK6vld52gdzNR8rm04NcCySwGg1zQpP3Z/PaZhXSwDWFv/qAbBrhHQobxq9wetKB2pb3UaL1SfYAwABEGg5NGAcbDtNwfWDqiyRKogg34FZcTy9rH7MbUbS+w0KT8GAiqMDq1enwIDla6+TlfFgzmZTGM/Y8dKGbJtuwAAXMQ5XjNfMSaAEmJJF22b8wG0rV25YziWsnxci/vb6yYBgNYx8plSjGAtXsNGgqBUcWzHyMkCjveywGir3JL2NQDYmACwA8L/OG/j7zDnRxIwqcUY2147qvJtbG77ZoGkDBZ7+FQcDyCobAsCVb62s04wQdukOA2X2d9NBQAcPUvJKQtNrbNrZJBiE5uKtde0vSfb28yenSZSILRTQAxMus6htK9t1foVAJYNrNUrGAEqggBgI8NtCAPQ06eXXwoGWnH4NrFzbDqJAUDDLL1vCmhW6TrVMFS1U4f1JRim2ihGx4EgpkOLqMXmQGJRkIIPv9WyySLahn1R+XSk8Txd/YuiKcATALhhDEBWoVTcZgOAdLzy4ZdjY8VnsCxlfZvlPTcFZxmWGtsXYQHAmzB6gIIt8HiPVKKp1M8oUT7aLDCnzwtSD68CNeWaKrykFcWoM1awSTmxFG2TImLso/ekH6HHII8DbBVHMGgeg4khyIDS8VEl4r+tRaQl4z5Qslo5x3ISC7drMqWKTrUbA0As8wWFWOSr0lWwZs9iTEDFs12sU5q+JaNwAaeeAkZTDqef0G5U8h2LDnT6YR9sIicGBD4nZKcUzz4RAOoME2jqZ+n5SQGA8fBKRAUAcAAVAPrwseOqPGbnahbJpFFrKhxl9SwQNPumYEkdZ3o4NgUpIAhkpHsfPjCsEz8p69UxKLFgKFqZjMrmtzLnpGsJ6OsXR34Y638XFlh4bd9gPZY3DzQneXercPy3KdmUnFgH7aaNVA4fSmd+vklOKn9vWYPUrgCwVszpK+YE4lzKcgEA9JVjo4yoUwrWMnoFAHY4peTY8RgA2K4JCKntWBYQbftinyElj8ctAJrWPcgsTWshXaywzbVwAg8fOu7HAKmbc2pInS+ZgyCD08Mvp87t03v0wL+t8u5tBqhr29jeQvVLJrXcrv1SlnL1AZoAYGlZ/5cAANML5f9d/VPfqq8AoPKbnFw8xGaCAD7ABQOAC5EBiFL2nVNLCeC9rLxJDot1vECYpGI7AOhUCQNwd67dh89w0h7PDewr+y4d2+vXlT285W2E0vUeyCgiVzF1ACh9W4cPTl5KcQcfu3J95/LW0GcbBuHY6sqp6szwTLXrzpur4x99kXVmoLDlO5dD2y2DLdXel3/r5D94y9toAGwYA0wKAGthuQHKWbS3xXrLyz2fd+qWDOvGALE8QJPzZ8MzG/L9/ddCteOWnbXF4veJY6u11evvEgb49PXbwxTgxQDe8nIA8E7dujuBdi0AD6SFkYHKR/V9SGDoR4skcRzh0terv+TGZOz8rDOAt8K85YWFCi34pJOmpdHMn+u6gL2Gix8///jXnAEE4t6pW295AQBY6NAqH12wYIWOHsPz4Ti8US0ZBwjePfS5KwOsffd4mALeePbVIDfHGLmbe8vL3c9bYd4+RdjUad/sxaVOXUoNkYB5B6C2w3mACF6+pw/w3+lnAgD+WDv7ZrHF6/d3igK85eUA4J269fYp3AFw7Mi3uTGJnkeoh8/KRysVft94x+7q8sXxl04CBF8dOVq3YVt824+XvK6M4z1nuwPAroPTqnV3rC0QxWCn2rVlAKSIB4PLq+Hwj7Hv+57cW102GAfAn8Nh9fZLB89ri2v14ynPCwC37tl53nuLdKma4x17iUWqRC52PCYn1Q5jVjuBLKtmnZrdE2iLL1Pt2jJAboC943ZveTm6Y+KG5WNYYtZiGa18Tr2Mwo497mnHH8es0fK/9e9Q28Dp/LySMAiyZVZayRMLA1ksgXbTiAJA8bBqZBBj6/g5Jeh55AE85eXuzdStKl0LQ2ylkWZPIZvAodJ5P90HwTI2LexVMOB8quQuWhDCJVytwLFVP2EaGFX0aDtd9s0NTolX722x3vJyz0gGiO2yRmWP3cmsUVUwxp+GNQhYoILjtGJGYmQA3ZxLpUNPN9+xLXTVTgeNi0FND5dbxMG1HquBzNwxg+jBAOibl7wcAJi6RTv75pLYVjdOEbRwbKClgSmLaGU1/AudFrj5FsfsPWx5u/tqoA6IRz2At8V6yysBgH0rid3GpnsdZwoAcwY4Wy6uVc12AwwtlPM0rV19A7BArFwecmH9KkN9OOtfEKxa2ubOAN71AN6ZO295JQyAuT7Q8ejFE7FrrJOoZWj0C1ALyM9dD+yqI4Faseb9SLacX9txwS8JgEmXg73rAbwzd97ycgDQ1C3HVFdQYdkau3PettMCLZv3I0DsfG+39ds3o9qiWHcAtK0HwAMha6dZvdJMIK5NZQG95OXyFDkAxDJ3BAJXV3Vfo92mRsVDceoAcxnfbqQJ4znasqYRAcvVrROdDANJWfhO1ezHQsO29QAXQybQvl4vVrJuFakhXFPko/UcTTIIVFvNFU0E9bEegLn92x76pNNiEBkqJ4+vy1UL70Pq1nvLuEs9wLQzgUr1XSmZeQVOHSl53M7dt9Rt23cZ5aaoxnoAfVtHqh6Ayqd1TGstIGexuQfl+VIG0P2CfUrdTrKhtGlsksvB9ZwxeieQ5pZ5biPqAUotthQApfLsu5Mgvw+p294DYFYYQLd09ylz51UNTIM5780Wuh5tlyeVBVLtPn7nhGtFUKnFejPARQMAPmisHsDurWe8isHW9WhtNykDIEETq/hRxWq+wFYMXbL0/Fh00FXe4VcPhFv3LXXrzgCxsvC29QAEBjzmSesBzvz6zDoqflD8aSt6Qk7CVA09+NwjYxVDW64aB0BXeQef2N/L1G3X1VDLlL2vByil9mm062Pq1vs5OyVVvDvTV3l9St16j9EcAJkR1V3Smh7frNStNwD+B3FPKS/cx9GJAAAAAElFTkSuQmCC"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\pinkchocobo.png",
+			"name": "pinkchocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "11",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "e5920c6b-449c-2192-ce1c-a2dad034151b",
+			"relative_path": "textures/pinkchocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\redchocobo.png",
+			"name": "redchocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "12",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "487c1b5e-fd92-a84a-dbda-e6dd9df21fc7",
+			"relative_path": "textures/redchocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\purplechocobo.png",
+			"name": "purplechocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "13",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "7f25261c-0647-ab0e-dfe3-a79f898ceee3",
+			"relative_path": "textures/purplechocobo.png",
+			"source": "data:image/png;base64,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"
+		},
+		{
+			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\flamechocobo.png",
+			"name": "flamechocobo.png",
+			"folder": "",
+			"namespace": "",
+			"id": "14",
+			"group": "",
+			"width": 128,
+			"height": 64,
+			"uv_width": 128,
+			"uv_height": 64,
+			"particle": false,
+			"use_as_default": false,
+			"layers_enabled": false,
+			"sync_to_project": "",
+			"render_mode": "default",
+			"render_sides": "auto",
+			"pbr_channel": "color",
+			"frame_time": 1,
+			"frame_order_type": "loop",
+			"frame_order": "",
+			"frame_interpolate": false,
+			"visible": true,
+			"internal": true,
+			"saved": true,
+			"uuid": "64c5eeb8-d99f-58c7-5d9b-6e2474f3e063",
+			"relative_path": "textures/flamechocobo.png",
+			"source": "data:image/png;base64,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"
 		},
 		{
 			"path": "D:\\Total\\OneDrive\\Documents\\Misc Docs\\Video Game Assets\\Modding Assets\\Minecraft Assets\\Figura Avatars\\avatars\\GitHubRepos\\FiguraChocoboTaurAvatar\\textures\\plumage.png",
