@@ -126,23 +126,23 @@ a.saddleAct = chocoboPage:newAction()
 local saddleInfo = {
 	{
 		title = {label = "No Saddle", text = "You do not have a saddle equiped."},
-		item  = "feather"
+		item  = itemCheck("chococraft:chocobo_feather", "feather")
 	},
 	{
 		title = {label = "Saddle", text = "You have a saddle equiped."},
-		item  = "saddle"
+		item  = itemCheck("chococraft:chocobo_saddle", "saddle")
 	},
 	{
 		title = {label = "Saddle Bags", text = "You have a saddle with some storage."},
-		item  = "bundle"
+		item  = itemCheck("chococraft:chocobo_saddle_bags", "bundle")
 	},
 	{
 		title = {label = "Saddle Pack", text = "You have a large saddle pack."},
-		item  = "chest"
+		item  = itemCheck("chococraft:chocobo_saddle_pack", "chest")
 	},
 	{
 		title = {label = "Saddle Storage", text = "Doesn\'t your back hurt?"},
-		item  = "chest_minecart"
+		item  = itemCheck("chococraft:chocobo_saddle_pack", "chest_minecart")
 	}
 }
 
@@ -170,7 +170,7 @@ function events.RENDER(delta, context)
 					{text = actionSetup.title.text, color = c.secondary}
 				}
 			))
-			:item(itemCheck(actionSetup.item))
+			:item(actionSetup.item)
 		
 		for _, act in pairs(a) do
 			act:hoverColor(c.hover):toggleColor(c.active)
