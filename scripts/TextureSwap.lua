@@ -154,7 +154,7 @@ local a = {}
 -- Actions
 if not pageExists then
 	a.pageAct = parentPage:newAction()
-		:item(itemCheck("egg"))
+		:item(itemCheck("chococraft:chocobo_feather", "feather"))
 		:onLeftClick(function() wheel:descend(chocoboPage) end)
 end
 
