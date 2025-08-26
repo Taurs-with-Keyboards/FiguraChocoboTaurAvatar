@@ -1,83 +1,118 @@
--- Required script
-local parts = require("lib.PartsAPI")
+-- Required scripts
+local parts   = require("lib.PartsAPI")
+local origins = require("lib.OriginsAPI")
 
 -- All colors
 local texs = {
 	
-	{
+	yellow = {
 		tex   = textures["textures.yellowchocobo"] or textures["ChocoboTaur.yellowchocobo"],
 		color = vectors.hexToRGB("F5F372")
 	},
-	{
+	green = {
 		tex   = textures["textures.greenchocobo"] or textures["ChocoboTaur.greenchocobo"],
 		color = vectors.hexToRGB("45C04B")
 	},
-	{
+	blue = {
 		tex   = textures["textures.bluechocobo"] or textures["ChocoboTaur.bluechocobo"],
 		color = vectors.hexToRGB("5696F3")
 	},
-	{
+	white = {
 		tex   = textures["textures.whitechocobo"] or textures["ChocoboTaur.whitechocobo"],
 		color = vectors.hexToRGB("C4C4BE")
 	},
-	{
+	black = {
 		tex   = textures["textures.blackchocobo"] or textures["ChocoboTaur.blackchocobo"],
 		color = vectors.hexToRGB("495254")
 	},
-	{
+	gold = {
 		tex   = textures["textures.goldchocobo"] or textures["ChocoboTaur.goldchocobo"],
 		color = vectors.hexToRGB("CAA028")
 	},
-	{
+	pink = {
 		tex   = textures["textures.pinkchocobo"] or textures["ChocoboTaur.pinkchocobo"],
 		color = vectors.hexToRGB("E298AE")
 	},
-	{
+	red = {
 		tex   = textures["textures.redchocobo"] or textures["ChocoboTaur.redchocobo"],
 		color = vectors.hexToRGB("DD464A")
 	},
-	{
+	purple = {
 		tex   = textures["textures.purplechocobo"] or textures["ChocoboTaur.purplechocobo"],
 		color = vectors.hexToRGB("AA5CF5")
 	},
-	{
+	flame = {
 		tex   = textures["textures.flamechocobo"] or textures["ChocoboTaur.flamechocobo"],
 		color = vectors.hexToRGB("954040")
 	}
 	
 }
 
+-- Color order
+local texMap = {
+	"yellow",
+	"green",
+	"blue",
+	"white",
+	"black",
+	"gold",
+	"pink",
+	"red",
+	"purple",
+	"flame"
+}
+
 -- Config setup
 config:name("ChocoboTaur")
-local tex = config:load("TextureColor") or vec(client.uuidToIntArray(avatar:getUUID())).x % (#colors - 1) + 1
+local tex = config:load("TextureColor") or vec(client.uuidToIntArray(avatar:getUUID())).x % (#texMap - 1) + 1
+
+-- Remove missing colors/textures
+for i = #texMap, 1, -1 do
+	if not texs[texMap[i]] or not texs[texMap[i]].tex then
+		table.remove(texMap, i)
+	end
+end
 
 -- Reset if color is out of bounds
-if tex > #texs then
+if tex > #texMap then
 	tex = 1
 end
 
 -- Variables
 local _tex = nil
+local override = false
 
 -- Texture parts
 local texParts = parts:createTable(function(part) return part:getName():find("_[sS]wap") end)
 
 function events.RENDER(delta, context)
 	
+	-- Origin check
+	override = false
+	for i, v in ipairs(texMap) do
+		if origins.hasOrigin(player, "chocobotaur:chocobotaur_"..v) then
+			tex = i
+			override = true
+			break
+		end
+	end
+	
 	if tex ~= _tex then
+		
+		local curTex = texs[texMap[tex]]
 		
 		-- Apply textures
 		for _, part in ipairs(texParts) do
 			
-			part:primaryTexture("CUSTOM", texs[tex].tex)
+			part:primaryTexture("CUSTOM", curTex.tex)
 			
 		end
 		
 		-- Glowing outline
-		renderer:outlineColor(texs[tex].color)
+		renderer:outlineColor(curTex.color)
 		
 		-- Avatar color
-		avatar:color(texs[tex].color)
+		avatar:color(curTex.color)
 		
 	end
 	
@@ -89,8 +124,11 @@ end
 -- Set the primary texture
 function pings.setTextureColor(i)
 	
+	-- Kills function early if origin is controling the texture
+	if override then return end
+	
 	-- Saves color
-	tex = ((tex + i - 1) % #texs) + 1
+	tex = ((tex + i - 1) % #texMap) + 1
 	config:save("TextureColor", tex)
 	
 end
@@ -132,7 +170,7 @@ if next(c) ~= nil then
 	function events.RENDER(delta, context)
 		
 		-- Variable
-		local color = texs[tex].color
+		local color = texs[texMap[tex]].color
 		
 		-- Create mermod colors
 		local appliedColors = {
@@ -173,49 +211,23 @@ a.texAct = chocoboPage:newAction()
 	:onRightClick(function() pings.setTextureColor(-1) end)
 	:onScroll(pings.setTextureColor)
 
--- Primary info table
-local texInfo = {
-	{
-		text = "Yellow",
-		item = itemCheck("yellow_dye")
-	},
-	{
-		text = "Green",
-		item = itemCheck("green_dye")
-	},
-	{
-		text = "Blue",
-		item = itemCheck("blue_dye")
-	},
-	{
-		text = "White",
-		item = itemCheck("white_dye")
-	},
-	{
-		text = "Black",
-		item = itemCheck("black_dye")
-	},
-	{
-		text = "Gold",
-		item = itemCheck("gold_ingot")
-	},
-	{
-		text = "Pink",
-		item = itemCheck("pink_dye")
-	},
-	{
-		text = "Red",
-		item = itemCheck("red_dye")
-	},
-	{
-		text = "Purple",
-		item = itemCheck("purple_dye")
-	},
-	{
-		text = "Flame",
-		item = itemCheck("blaze_powder")
-	}
+-- Texture items table
+local texItems = {
+	yellow = itemCheck("yellow_dye"),
+	green  = itemCheck("green_dye"),
+	blue   = itemCheck("blue_dye"),
+	white  = itemCheck("white_dye"),
+	black  = itemCheck("black_dye"),
+	gold   = itemCheck("gold_ingot"),
+	pink   = itemCheck("pink_dye"),
+	red    = itemCheck("red_dye"),
+	purple = itemCheck("purple_dye"),
+	flame  = itemCheck("blaze_powder")
 }
+-- Inserts items into table
+for k, v in pairs(texItems) do
+	if texs[k] then texs[k].item = v end
+end
 
 -- Update actions
 function events.RENDER(delta, context)
@@ -233,10 +245,11 @@ function events.RENDER(delta, context)
 				{
 					"",
 					{text = "Chocobo Texture\n\n", bold = true, color = c.primary},
-					{text = ("Sets the lower body to use the %s varient chocobo!"):format(texInfo[tex].text), color = c.secondary}
+					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[tex]:gsub("^%l", string.upper)), color = c.secondary},
+					{text = override and "Your origin is currently controling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or c.secondary}
 				}
 			))
-			:item(texInfo[tex].item)
+			:item(texs[texMap[tex]].item)
 		
 		for _, act in pairs(a) do
 			act:hoverColor(c.hover)
