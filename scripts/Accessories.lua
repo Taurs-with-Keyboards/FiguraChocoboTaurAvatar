@@ -77,9 +77,9 @@ function pings.setSaddle(i)
 end
 
 -- Sync variables
-function pings.syncAccessories(a)
+function pings.syncAccessories(...)
 	
-	saddle = a
+	saddle = ...
 	_type = saddleTypes[saddle]
 	
 end

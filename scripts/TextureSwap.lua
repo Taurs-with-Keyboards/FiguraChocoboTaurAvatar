@@ -133,10 +133,10 @@ function pings.setTextureColor(i)
 	
 end
 
--- Sync variable
-function pings.syncTextures(a)
+-- Sync variables
+function pings.syncTextures(...)
 	
-	tex = a
+	tex = ...
 	
 end
 
