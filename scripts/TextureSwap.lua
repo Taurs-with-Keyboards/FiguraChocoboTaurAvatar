@@ -1,5 +1,6 @@
 -- Required scripts
 local parts   = require("lib.PartsAPI")
+local sync    = require("lib.LetThatSyncFig")
 local origins = require("lib.OriginsAPI")
 
 -- All colors
@@ -62,10 +63,6 @@ local texMap = {
 	"flame"
 }
 
--- Config setup
-config:name("ChocoboTaur")
-local tex = config:load("TextureColor") or vec(client.uuidToIntArray(avatar:getUUID())).x % (#texMap - 1) + 1
-
 -- Remove missing colors/textures
 for i = #texMap, 1, -1 do
 	if not texs[texMap[i]] or not texs[texMap[i]].tex then
@@ -73,9 +70,12 @@ for i = #texMap, 1, -1 do
 	end
 end
 
+-- Synced variables setup
+local tex = sync.add(config:load("TextureColor"), vec(client.uuidToIntArray(avatar:getUUID())).x % (#texMap - 1) + 1)
+
 -- Reset if color is out of bounds
-if tex > #texMap then
-	tex = 1
+if sync[tex] > #texMap then
+	sync[tex] = 1
 end
 
 -- Variables
@@ -91,15 +91,15 @@ function events.RENDER(delta, context)
 	override = false
 	for i, v in ipairs(texMap) do
 		if origins.hasOrigin(player, "chocobotaur:chocobotaur_"..v) then
-			tex = i
+			sync[tex] = i
 			override = true
 			break
 		end
 	end
 	
-	if tex ~= _tex then
+	if sync[tex] ~= _tex then
 		
-		local curTex = texs[texMap[tex]]
+		local curTex = texs[texMap[sync[tex]]]
 		
 		-- Apply textures
 		for _, part in ipairs(texParts) do
@@ -117,7 +117,7 @@ function events.RENDER(delta, context)
 	end
 	
 	-- Store data
-	_tex = tex
+	_tex = sync[tex]
 	
 end
 
@@ -128,29 +128,13 @@ function pings.setTextureColor(i)
 	if override then return end
 	
 	-- Saves color
-	tex = ((tex + i - 1) % #texMap) + 1
-	config:save("TextureColor", tex)
-	
-end
-
--- Sync variables
-function pings.syncTextures(...)
-	
-	tex = ...
+	sync[tex] = ((sync[tex] + i - 1) % #texMap) + 1
+	config:save("TextureColor", sync[tex])
 	
 end
 
 -- Host only instructions
 if not host:isHost() then return end
-
--- Sync on tick
-function events.TICK()
-	
-	if world.getTime() % 200 == 0 then
-		pings.syncTextures(tex)
-	end
-	
-end
 
 -- Required scripts
 local s, wheel, itemCheck, c = pcall(require, "scripts.ActionWheel")
@@ -170,7 +154,7 @@ if next(c) ~= nil then
 	function events.RENDER(delta, context)
 		
 		-- Variable
-		local color = texs[texMap[tex]].color
+		local color = texs[texMap[sync[tex]]].color
 		
 		-- Create mermod colors
 		local appliedColors = {
@@ -245,11 +229,11 @@ function events.RENDER(delta, context)
 				{
 					"",
 					{text = "Chocobo Texture\n\n", bold = true, color = c.primary},
-					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[tex]:gsub("^%l", string.upper)), color = c.secondary},
+					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[sync[tex]]:gsub("^%l", string.upper)), color = c.secondary},
 					{text = override and "Your origin is currently controling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or c.secondary}
 				}
 			))
-			:item(texs[texMap[tex]].item)
+			:item(texs[texMap[sync[tex]]].item)
 		
 		for _, act in pairs(a) do
 			act:hoverColor(c.hover)

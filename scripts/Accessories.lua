@@ -1,9 +1,9 @@
--- Required script
+-- Required scripts
 local parts = require("lib.PartsAPI")
+local sync  = require("lib.LetThatSyncFig")
 
--- Config setup
-config:name("ChocoboTaur")
-local saddle = config:load("AccessoriesSaddle") or 1
+-- Synced variables setup
+local saddleType = sync.add(config:load("AccessoriesSaddle"), 1)
 
 local saddleTypes = {
 	-- Nothing
@@ -33,12 +33,12 @@ local saddleTypes = {
 }
 
 -- Variable
-local _type = saddleTypes[saddle]
+local _type = saddleTypes[sync[saddleType]]
 
 function events.RENDER(delta, context)
 	
 	-- State
-	local state = saddleTypes[saddle]
+	local state = saddleTypes[sync[saddleType]]
 	
 	-- Apply
 	parts.group.Saddles:visible(state.saddle)
@@ -46,7 +46,7 @@ function events.RENDER(delta, context)
 	parts.group.Saddles.Storage:visible(state.storage)
 	
 	-- Apply textures
-	if saddleTypes[saddle].texture then
+	if saddleTypes[sync[saddleType]].texture then
 		parts.group.Saddles:primaryTexture("CUSTOM", state.texture)
 	end
 	
@@ -55,46 +55,29 @@ end
 -- Saddle states
 function pings.setSaddle(i)
 	
-	saddle = ((saddle + i - 1) % #saddleTypes) + 1
-	config:save("AccessoriesSaddle", saddle)
+	sync[saddleType] = ((sync[saddleType] + i - 1) % #saddleTypes) + 1
+	config:save("AccessoriesSaddle", sync[saddle])
 	
 	-- Sounds
 	if player:isLoaded() then
-		if saddleTypes[saddle].saddle ~= _type.saddle then
+		if saddleTypes[sync[saddleType]].saddle ~= _type.saddle then
 			sounds:playSound("entity.horse.saddle", player:getPos(), 0.5)
 		end
-		if saddleTypes[saddle].bags ~= _type.bags then
+		if saddleTypes[sync[saddleType]].bags ~= _type.bags then
 			sounds:playSound("item.armor.equip_generic", player:getPos(), 0.5)
 		end
-		if saddleTypes[saddle].storage ~= _type.storage then
+		if saddleTypes[sync[saddleType]].storage ~= _type.storage then
 			sounds:playSound("block.wood.place", player:getPos(), 0.5)
 		end
 	end
 	
 	-- Save last saddle
-	_type = saddleTypes[saddle]
-	
-end
-
--- Sync variables
-function pings.syncAccessories(...)
-	
-	saddle = ...
-	_type = saddleTypes[saddle]
+	_type = saddleTypes[sync[saddleType]]
 	
 end
 
 -- Host only instructions
 if not host:isHost() then return end
-
--- Sync on tick
-function events.TICK()
-	
-	if world.getTime() % 200 == 0 then
-		pings.syncAccessories(saddle)
-	end
-	
-end
 
 -- Required scripts
 local s, wheel, itemCheck, c = pcall(require, "scripts.ActionWheel")
@@ -157,7 +140,7 @@ function events.RENDER(delta, context)
 				))
 		end
 		
-		local actionSetup = saddleInfo[saddle]
+		local actionSetup = saddleInfo[sync[saddleType]]
 		a.saddleAct
 			:title(toJson(
 				{
