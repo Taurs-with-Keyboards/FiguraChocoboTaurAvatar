@@ -137,7 +137,7 @@ end
 if not host:isHost() then return end
 
 -- Required scripts
-local s, wheel, itemCheck, c = pcall(require, "scripts.ActionWheel")
+local s, wheel, c = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 pcall(require, "scripts.Accessories") -- Tries to find script, not required
 
@@ -186,7 +186,7 @@ local a = {}
 -- Actions
 if not pageExists then
 	a.pageAct = parentPage:newAction()
-		:item(itemCheck("chococraft:chocobo_feather", "feather"))
+		:item("chococraft:chocobo_feather", "feather")
 		:onLeftClick(function() wheel:descend(chocoboPage) end)
 end
 
@@ -197,16 +197,16 @@ a.texAct = chocoboPage:newAction()
 
 -- Texture items table
 local texItems = {
-	yellow = itemCheck("yellow_dye"),
-	green  = itemCheck("green_dye"),
-	blue   = itemCheck("blue_dye"),
-	white  = itemCheck("white_dye"),
-	black  = itemCheck("black_dye"),
-	gold   = itemCheck("gold_ingot"),
-	pink   = itemCheck("pink_dye"),
-	red    = itemCheck("red_dye"),
-	purple = itemCheck("purple_dye"),
-	flame  = itemCheck("blaze_powder")
+	yellow = "yellow_dye",
+	green  = "green_dye",
+	blue   = "blue_dye",
+	white  = "white_dye",
+	black  = "black_dye",
+	gold   = "gold_ingot",
+	pink   = "pink_dye",
+	red    = "red_dye",
+	purple = "purple_dye",
+	flame  = "blaze_powder"
 }
 -- Inserts items into table
 for k, v in pairs(texItems) do

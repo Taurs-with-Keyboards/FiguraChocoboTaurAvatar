@@ -80,7 +80,7 @@ end
 if not host:isHost() then return end
 
 -- Required scripts
-local s, wheel, itemCheck, c = pcall(require, "scripts.ActionWheel")
+local s, wheel, c = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 
 -- Check for if page already exists
@@ -96,7 +96,7 @@ local a = {}
 -- Actions
 if not pageExists then
 	a.pageAct = parentPage:newAction()
-		:item(itemCheck("chococraft:chocobo_feather", "feather"))
+		:item("chococraft:chocobo_feather", "feather")
 		:onLeftClick(function() wheel:descend(chocoboPage) end)
 end
 
@@ -109,23 +109,23 @@ a.saddleAct = chocoboPage:newAction()
 local saddleInfo = {
 	{
 		title = {label = "No Saddle", text = "You do not have a saddle equiped."},
-		item  = itemCheck("chococraft:chocobo_feather", "feather")
+		item  = {"chococraft:chocobo_feather", "feather"}
 	},
 	{
 		title = {label = "Saddle", text = "You have a saddle equiped."},
-		item  = itemCheck("chococraft:chocobo_saddle", "saddle")
+		item  = {"chococraft:chocobo_saddle", "saddle"}
 	},
 	{
 		title = {label = "Saddle Bags", text = "You have a saddle with some storage."},
-		item  = itemCheck("chococraft:chocobo_saddle_bags", "bundle")
+		item  = {"chococraft:chocobo_saddle_bags", "bundle"}
 	},
 	{
 		title = {label = "Saddle Pack", text = "You have a large saddle pack."},
-		item  = itemCheck("chococraft:chocobo_saddle_pack", "chest")
+		item  = {"chococraft:chocobo_saddle_pack", "chest"}
 	},
 	{
 		title = {label = "Saddle Storage", text = "Doesn\'t your back hurt?"},
-		item  = itemCheck("chococraft:chocobo_saddle_pack", "chest_minecart")
+		item  = {"chococraft:chocobo_saddle_pack", "chest_minecart"}
 	}
 }
 
@@ -153,7 +153,7 @@ function events.RENDER(delta, context)
 					{text = actionSetup.title.text, color = c.secondary}
 				}
 			))
-			:item(actionSetup.item)
+			:item(table.unpack(actionSetup.item))
 		
 		for _, act in pairs(a) do
 			act:hoverColor(c.hover):toggleColor(c.active)
