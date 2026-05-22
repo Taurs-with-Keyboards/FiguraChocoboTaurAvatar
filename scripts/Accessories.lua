@@ -3,7 +3,7 @@ local parts = require("lib.PartsAPI")
 local sync  = require("lib.LetThatSyncFig")
 
 -- Synced variables setup
-local saddleType = sync.add(config:load("AccessoriesSaddle"), 1)
+local saddleType = sync.new("AccessoriesSaddle", 1):config()
 
 local saddleTypes = {
 	-- Nothing
@@ -33,12 +33,12 @@ local saddleTypes = {
 }
 
 -- Variable
-local _type = saddleTypes[sync[saddleType]]
+local _type = saddleTypes[saddleType.curr]
 
 function events.RENDER(delta, context)
 	
 	-- State
-	local state = saddleTypes[sync[saddleType]]
+	local state = saddleTypes[saddleType.curr]
 	
 	-- Apply
 	parts.group.Saddles:visible(state.saddle)
@@ -46,35 +46,35 @@ function events.RENDER(delta, context)
 	parts.group.Saddles.Storage:visible(state.storage)
 	
 	-- Apply textures
-	if saddleTypes[sync[saddleType]].texture then
+	if saddleTypes[saddleType.curr].texture then
 		parts.group.Saddles:primaryTexture("CUSTOM", state.texture)
 	end
 	
 end
 
--- Saddle states
-function pings.setSaddle(i)
-	
-	sync[saddleType] = ((sync[saddleType] + i - 1) % #saddleTypes) + 1
-	config:save("AccessoriesSaddle", sync[saddle])
+-- Play sound if adjusting saddle
+local function saddleSound()
 	
 	-- Sounds
 	if player:isLoaded() then
-		if saddleTypes[sync[saddleType]].saddle ~= _type.saddle then
+		if saddleTypes[saddleType.curr].saddle ~= _type.saddle then
 			sounds:playSound("entity.horse.saddle", player:getPos(), 0.5)
 		end
-		if saddleTypes[sync[saddleType]].bags ~= _type.bags then
+		if saddleTypes[saddleType.curr].bags ~= _type.bags then
 			sounds:playSound("item.armor.equip_generic", player:getPos(), 0.5)
 		end
-		if saddleTypes[sync[saddleType]].storage ~= _type.storage then
+		if saddleTypes[saddleType.curr].storage ~= _type.storage then
 			sounds:playSound("block.wood.place", player:getPos(), 0.5)
 		end
 	end
 	
 	-- Save last saddle
-	_type = saddleTypes[sync[saddleType]]
+	_type = saddleTypes[saddleType.curr]
 	
 end
+
+-- Apply sound to sync updates
+saddleType:applyFunc(saddleSound)
 
 -- Host only instructions
 if not host:isHost() then return end
@@ -100,10 +100,15 @@ if not pageExists then
 		:onLeftClick(function() wheel:descend(chocoboPage) end)
 end
 
+-- Set saddle
+local function setSaddle(i)
+	return ((saddleType.curr + i - 1) % #saddleTypes) + 1
+end
+
 a.saddleAct = chocoboPage:newAction()
-	:onLeftClick(function() pings.setSaddle(1) end)
-	:onRightClick(function() pings.setSaddle(-1) end)
-	:onScroll(pings.setSaddle)
+	:onLeftClick(function() saddleType:update(setSaddle(1)) end)
+	:onRightClick(function() saddleType:update(setSaddle(-1)) end)
+	:onScroll(function(x) saddleType:update(setSaddle(x), 20) end)
 
 -- Saddle context info table
 local saddleInfo = {
@@ -140,7 +145,7 @@ function events.RENDER(delta, context)
 				))
 		end
 		
-		local actionSetup = saddleInfo[sync[saddleType]]
+		local actionSetup = saddleInfo[saddleType.curr]
 		a.saddleAct
 			:title(toJson(
 				{

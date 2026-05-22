@@ -71,11 +71,11 @@ for i = #texMap, 1, -1 do
 end
 
 -- Synced variables setup
-local tex = sync.add(config:load("TextureColor"), vec(client.uuidToIntArray(avatar:getUUID())).x % (#texMap - 1) + 1)
+local tex = sync.new("TextureColor", vec(client.uuidToIntArray(avatar:getUUID())).x % (#texMap - 1) + 1):config()
 
 -- Reset if color is out of bounds
-if sync[tex] > #texMap then
-	sync[tex] = 1
+if tex.curr > #texMap then
+	tex.curr = 1
 end
 
 -- Variables
@@ -91,15 +91,15 @@ function events.RENDER(delta, context)
 	override = false
 	for i, v in ipairs(texMap) do
 		if origins.hasOrigin(player, "chocobotaur:chocobotaur_"..v) then
-			sync[tex] = i
+			tex.curr = i
 			override = true
 			break
 		end
 	end
 	
-	if sync[tex] ~= _tex then
+	if tex.curr ~= _tex then
 		
-		local curTex = texs[texMap[sync[tex]]]
+		local curTex = texs[texMap[tex.curr]]
 		
 		-- Apply textures
 		for _, part in ipairs(texParts) do
@@ -117,19 +117,7 @@ function events.RENDER(delta, context)
 	end
 	
 	-- Store data
-	_tex = sync[tex]
-	
-end
-
--- Set the primary texture
-function pings.setTextureColor(i)
-	
-	-- Kills function early if origin is controling the texture
-	if override then return end
-	
-	-- Saves color
-	sync[tex] = ((sync[tex] + i - 1) % #texMap) + 1
-	config:save("TextureColor", sync[tex])
+	_tex = tex.curr
 	
 end
 
@@ -154,7 +142,7 @@ if next(c) ~= nil then
 	function events.RENDER(delta, context)
 		
 		-- Variable
-		local color = texs[texMap[sync[tex]]].color
+		local color = texs[texMap[tex.curr]].color
 		
 		-- Create mermod colors
 		local appliedColors = {
@@ -190,10 +178,16 @@ if not pageExists then
 		:onLeftClick(function() wheel:descend(chocoboPage) end)
 end
 
+-- Set the primary texture
+local function setTextureColor(i)
+	if override then return end 
+	return ((tex.curr + i - 1) % #texMap) + 1
+end
+
 a.texAct = chocoboPage:newAction()
-	:onLeftClick(function() pings.setTextureColor(1) end)
-	:onRightClick(function() pings.setTextureColor(-1) end)
-	:onScroll(pings.setTextureColor)
+	:onLeftClick(function() tex:update(setTextureColor(1)) end)
+	:onRightClick(function() tex:update(setTextureColor(-1)) end)
+	:onScroll(function(x) tex:update(setTextureColor(x), 20) end)
 
 -- Texture items table
 local texItems = {
@@ -229,11 +223,11 @@ function events.RENDER(delta, context)
 				{
 					"",
 					{text = "Chocobo Texture\n\n", bold = true, color = c.primary},
-					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[sync[tex]]:gsub("^%l", string.upper)), color = c.secondary},
+					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[tex.curr]:gsub("^%l", string.upper)), color = c.secondary},
 					{text = override and "Your origin is currently controling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or c.secondary}
 				}
 			))
-			:item(texs[texMap[sync[tex]]].item)
+			:item(texs[texMap[tex.curr]].item)
 		
 		for _, act in pairs(a) do
 			act:hoverColor(c.hover)
