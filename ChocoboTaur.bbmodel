@@ -3181,6 +3181,75 @@
 			"autouv": 0,
 			"isOpen": true,
 			"primary_selected": false
+		},
+		{
+			"name": "Camera",
+			"uuid": "5819cac9-69cd-d6c6-8b59-29d3fd524b26",
+			"export": true,
+			"locked": false,
+			"scope": 0,
+			"selected": false,
+			"_static": {
+				"properties": {},
+				"temp_data": {}
+			},
+			"origin": [0, 47, -7.5],
+			"rotation": [0, 0, 0],
+			"color": 0,
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": false,
+			"primary_selected": false
+		},
+		{
+			"name": "NameplatePivot",
+			"uuid": "5e49f18c-bcab-7492-213f-4ed472f2075e",
+			"export": true,
+			"locked": false,
+			"scope": 0,
+			"selected": false,
+			"_static": {
+				"properties": {},
+				"temp_data": {}
+			},
+			"origin": [0, 49, -7.5],
+			"rotation": [0, 0, 0],
+			"color": 0,
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": true,
+			"primary_selected": false
+		},
+		{
+			"name": "Nameplate",
+			"uuid": "ab560715-084f-1245-2ada-6d53c7619029",
+			"export": true,
+			"locked": false,
+			"scope": 0,
+			"selected": false,
+			"_static": {
+				"properties": {},
+				"temp_data": {}
+			},
+			"origin": [0, 59.6, -7.5],
+			"rotation": [0, 0, 0],
+			"color": 0,
+			"children": [],
+			"reset": false,
+			"shade": true,
+			"mirror_uv": false,
+			"visibility": true,
+			"autouv": 0,
+			"isOpen": false,
+			"primary_selected": false
 		}
 	],
 	"outliner": [
@@ -3338,6 +3407,22 @@
 												{
 													"uuid": "41fb4c03-717c-57a0-9651-bd4003146603",
 													"isOpen": true,
+													"children": []
+												}
+											]
+										},
+										{
+											"uuid": "5819cac9-69cd-d6c6-8b59-29d3fd524b26",
+											"isOpen": false,
+											"children": []
+										},
+										{
+											"uuid": "5e49f18c-bcab-7492-213f-4ed472f2075e",
+											"isOpen": true,
+											"children": [
+												{
+													"uuid": "ab560715-084f-1245-2ada-6d53c7619029",
+													"isOpen": false,
 													"children": []
 												}
 											]
