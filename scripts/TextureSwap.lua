@@ -125,7 +125,7 @@ end
 if not host:isHost() then return end
 
 -- Required scripts
-local s, wheel, c = pcall(require, "scripts.ActionWheel")
+local s, pageNav, c = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 pcall(require, "scripts.Accessories") -- Tries to find script, not required
 
@@ -175,7 +175,7 @@ local a = {}
 if not pageExists then
 	a.pageAct = parentPage:newAction()
 		:item("chococraft:chocobo_feather", "feather")
-		:onLeftClick(function() wheel:descend(chocoboPage) end)
+		:onLeftClick(function() pageNav.descend(chocoboPage) end)
 end
 
 -- Set the primary texture
