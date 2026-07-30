@@ -80,7 +80,7 @@ saddleType:applyFunc(saddleSound)
 if not host:isHost() then return end
 
 -- Required scripts
-local s, pageNav, c = pcall(require, "scripts.ActionWheel")
+local s, pageNav, acts, c = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 
 -- Check for if page already exists
@@ -90,12 +90,9 @@ local pageExists = action_wheel:getPage("Chocobo")
 local parentPage  = action_wheel:getPage("Main")
 local chocoboPage = pageExists or action_wheel:newPage("Chocobo")
 
--- Actions table setup
-local a = {}
-
 -- Actions
 if not pageExists then
-	a.pageAct = parentPage:newAction()
+	acts.chocoboPage = parentPage:newAction()
 		:item("chococraft:chocobo_feather", "feather")
 		:onLeftClick(function() pageNav.descend(chocoboPage) end)
 end
@@ -105,7 +102,7 @@ local function setSaddle(i)
 	return ((saddleType.curr + i - 1) % #saddleTypes) + 1
 end
 
-a.saddleAct = chocoboPage:newAction()
+acts.accessoriesSaddle = chocoboPage:newAction()
 	:onLeftClick(function() saddleType:update(setSaddle(1)) end)
 	:onRightClick(function() saddleType:update(setSaddle(-1)) end)
 	:onScroll(function(x) saddleType:update(setSaddle(x), 20) end)
@@ -138,15 +135,16 @@ local saddleInfo = {
 function events.RENDER(delta, context)
 	
 	if action_wheel:isEnabled() then
-		if a.pageAct then
-			a.pageAct
+		if acts.chocoboPage then
+			acts.chocoboPage
 				:title(toJson(
 					{text = "Chocobo Settings", bold = true, color = c.primary}
 				))
+				:hoverColor(c.hover)
 		end
 		
 		local actionSetup = saddleInfo[saddleType.curr]
-		a.saddleAct
+		acts.accessoriesSaddle
 			:title(toJson(
 				{
 					"",
@@ -159,10 +157,8 @@ function events.RENDER(delta, context)
 				}
 			))
 			:item(table.unpack(actionSetup.item))
-		
-		for _, act in pairs(a) do
-			act:hoverColor(c.hover):toggleColor(c.active)
-		end
+			:hoverColor(c.hover)
+			:toggleColor(c.active)
 		
 	end
 	

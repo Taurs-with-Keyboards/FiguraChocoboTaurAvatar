@@ -125,7 +125,7 @@ end
 if not host:isHost() then return end
 
 -- Required scripts
-local s, pageNav, c = pcall(require, "scripts.ActionWheel")
+local s, pageNav, acts, c = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 pcall(require, "scripts.Accessories") -- Tries to find script, not required
 
@@ -168,12 +168,9 @@ local pageExists = action_wheel:getPage("Chocobo")
 local parentPage  = action_wheel:getPage("Main")
 local chocoboPage = pageExists or action_wheel:newPage("Chocobo")
 
--- Actions table setup
-local a = {}
-
 -- Actions
 if not pageExists then
-	a.pageAct = parentPage:newAction()
+	acts.chocoboPage = parentPage:newAction()
 		:item("chococraft:chocobo_feather", "feather")
 		:onLeftClick(function() pageNav.descend(chocoboPage) end)
 end
@@ -184,7 +181,7 @@ local function setTextureColor(i)
 	return ((tex.curr + i - 1) % #texMap) + 1
 end
 
-a.texAct = chocoboPage:newAction()
+acts.textureChange = chocoboPage:newAction()
 	:onLeftClick(function() tex:update(setTextureColor(1)) end)
 	:onRightClick(function() tex:update(setTextureColor(-1)) end)
 	:onScroll(function(x) tex:update(setTextureColor(x), 20) end)
@@ -211,14 +208,15 @@ end
 function events.RENDER(delta, context)
 	
 	if action_wheel:isEnabled() then
-		if a.pageAct then
-			a.pageAct
+		if acts.chocoboPage then
+			acts.chocoboPage
 				:title(toJson(
 					{text = "Chocobo Settings", bold = true, color = c.primary}
 				))
+				:hoverColor(c.hover)
 		end
 		
-		a.texAct
+		acts.textureChange
 			:title(toJson(
 				{
 					"",
@@ -228,10 +226,7 @@ function events.RENDER(delta, context)
 				}
 			))
 			:item(texs[texMap[tex.curr]].item)
-		
-		for _, act in pairs(a) do
-			act:hoverColor(c.hover)
-		end
+			:hoverColor(c.hover)
 		
 	end
 	

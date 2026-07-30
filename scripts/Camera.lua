@@ -145,7 +145,7 @@ allowEye:applyFunc(function()
 end)
 
 -- Required scripts
-local s, pageNav, c = pcall(require, "scripts.ActionWheel")
+local s, pageNav, acts, c = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 pcall(require, "scripts.Player") -- Tries to find script, not required
 
@@ -153,15 +153,12 @@ pcall(require, "scripts.Player") -- Tries to find script, not required
 local parentPage = action_wheel:getPage("Player") or action_wheel:getPage("Main")
 local cameraPage = action_wheel:newPage("Camera")
 
--- Actions table setup
-local a = {}
-
 -- Actions
-a.pageAct = parentPage:newAction()
+acts.cameraPage = parentPage:newAction()
 	:item("redstone")
 	:onLeftClick(function() pageNav.descend(cameraPage) end)
 
-a.posAct = cameraPage:newAction()
+acts.cameraToggle = cameraPage:newAction()
 	:item("skeleton_skull")
 	:toggleItem("player_head{SkullOwner:"..avatar:getEntityName().."}")
 	:onToggle(function(bool)
@@ -169,7 +166,7 @@ a.posAct = cameraPage:newAction()
 	end)
 	:toggled(allowCam.curr)
 
-a.eyeAct = cameraPage:newAction()
+acts.cameraEyeToggle = cameraPage:newAction()
 	:item("ender_pearl")
 	:toggleItem("ender_eye")
 	:onToggle(function(bool)
@@ -181,12 +178,13 @@ a.eyeAct = cameraPage:newAction()
 function events.RENDER(delta, context)
 	
 	if action_wheel:isEnabled() then
-		a.pageAct
+		acts.cameraPage
 			:title(toJson(
 				{text = "Camera Settings", bold = true, color = c.primary}
 			))
+			:hoverColor(c.hover)
 		
-		a.posAct
+		acts.cameraToggle
 			:title(toJson(
 				{
 					"",
@@ -195,8 +193,10 @@ function events.RENDER(delta, context)
 					{text = "To prevent x-ray, the camera will reset to its default position if inside a block.", color = "red"}
 				}
 			))
+			:hoverColor(c.hover)
+			:toggleColor(c.active)
 		
-		a.eyeAct
+		acts.cameraEyeToggle
 			:title(toJson(
 				{
 					"",
@@ -206,10 +206,8 @@ function events.RENDER(delta, context)
 					{text = "This feature is dangerous!\nIt can and will be flagged on servers with anticheat!\nFurthermore, \"In Wall\" damage is possible. (The x-ray prevention will try to avoid this)\nThis setting will only be saved on a \"Per-Server\" basis.\n\nPlease use with extreme caution!", color = "red"}
 				}
 			))
-		
-		for _, act in pairs(a) do
-			act:hoverColor(c.hover):toggleColor(c.active)
-		end
+			:hoverColor(c.hover)
+			:toggleColor(c.active)
 		
 	end
 	
