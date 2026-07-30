@@ -125,16 +125,16 @@ end
 if not host:isHost() then return end
 
 -- Required scripts
-local s, pageNav, acts, c = pcall(require, "scripts.ActionWheel")
+local s, pageNav, acts, colors = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 pcall(require, "scripts.Accessories") -- Tries to find script, not required
 
 -- Dont preform if color properties is empty
-if next(c) ~= nil then
+if next(colors) ~= nil then
 	
 	-- Store init colors
 	local initColors = {}
-	for k, v in pairs(c) do
+	for k, v in pairs(colors) do
 		initColors[k] = v
 	end
 	
@@ -153,8 +153,8 @@ if next(c) ~= nil then
 		}
 		
 		-- Update action wheel colors
-		for k in pairs(c) do
-			c[k] = appliedColors[k]
+		for k in pairs(colors) do
+			colors[k] = appliedColors[k]
 		end
 		
 	end
@@ -211,22 +211,22 @@ function events.RENDER(delta, context)
 		if acts.chocoboPage then
 			acts.chocoboPage
 				:title(toJson(
-					{text = "Chocobo Settings", bold = true, color = c.primary}
+					{text = "Chocobo Settings", bold = true, color = colors.primary}
 				))
-				:hoverColor(c.hover)
+				:hoverColor(colors.hover)
 		end
 		
 		acts.textureChange
 			:title(toJson(
 				{
 					"",
-					{text = "Chocobo Texture\n\n", bold = true, color = c.primary},
-					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[tex.curr]:gsub("^%l", string.upper)), color = c.secondary},
-					{text = override and "Your origin is currently controling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or c.secondary}
+					{text = "Chocobo Texture\n\n", bold = true, color = colors.primary},
+					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[tex.curr]:gsub("^%l", string.upper)), color = colors.secondary},
+					{text = override and "Your origin is currently controling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or colors.secondary}
 				}
 			))
 			:item(texs[texMap[tex.curr]].item)
-			:hoverColor(c.hover)
+			:hoverColor(colors.hover)
 		
 	end
 	

@@ -80,7 +80,7 @@ saddleType:applyFunc(saddleSound)
 if not host:isHost() then return end
 
 -- Required scripts
-local s, pageNav, acts, c = pcall(require, "scripts.ActionWheel")
+local s, pageNav, acts, colors = pcall(require, "scripts.ActionWheel")
 if not s then return end -- Kills script early if ActionWheel.lua isnt found
 
 -- Check for if page already exists
@@ -138,9 +138,9 @@ function events.RENDER(delta, context)
 		if acts.chocoboPage then
 			acts.chocoboPage
 				:title(toJson(
-					{text = "Chocobo Settings", bold = true, color = c.primary}
+					{text = "Chocobo Settings", bold = true, color = colors.primary}
 				))
-				:hoverColor(c.hover)
+				:hoverColor(colors.hover)
 		end
 		
 		local actionSetup = saddleInfo[saddleType.curr]
@@ -148,17 +148,17 @@ function events.RENDER(delta, context)
 			:title(toJson(
 				{
 					"",
-					{text = "Saddle\n\n", bold = true, color = c.primary},
-					{text = "Scroll or click to set a saddle configuration!\n\n", color = c.secondary},
-					{text = "Current configuration: ", bold = true, color = c.secondary},
+					{text = "Saddle\n\n", bold = true, color = colors.primary},
+					{text = "Scroll or click to set a saddle configuration!\n\n", color = colors.secondary},
+					{text = "Current configuration: ", bold = true, color = colors.secondary},
 					{text = actionSetup.title.label},
 					{text = " | "},
-					{text = actionSetup.title.text, color = c.secondary}
+					{text = actionSetup.title.text, color = colors.secondary}
 				}
 			))
 			:item(table.unpack(actionSetup.item))
-			:hoverColor(c.hover)
-			:toggleColor(c.active)
+			:hoverColor(colors.hover)
+			:toggleColor(colors.active)
 		
 	end
 	
