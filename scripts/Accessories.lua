@@ -74,7 +74,7 @@ local function saddleSound()
 end
 
 -- Apply sound to sync updates
-saddleType:applyFunc(saddleSound)
+saddleType:addFunc(saddleSound)
 
 -- Host only instructions
 if not host:isHost() then return end
