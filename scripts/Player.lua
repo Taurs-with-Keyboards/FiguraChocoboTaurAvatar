@@ -2,29 +2,41 @@
 local parts = require("lib.PartsAPI")
 local sync  = require("lib.LetThatSyncFig")
 
+-- Parts setup
+local chocobo = parts.new(models.ChocoboTaur)
+
 -- Synced variables setup
 local skin = sync.new("AvatarVanillaSkin", true):config()
 local slim = sync.new("AvatarSlim", false):config()
 
+-- Skull setup
+chocobo:deepCopy(chocobo.outliner.Head)
+	:moveTo(chocobo.root)
+	:parentType("SKULL")
+	:pos(-chocobo.outliner.Head:getPivot())
+
+-- Portrait setup
+chocobo:deepCopy(chocobo.outliner.Head)
+	:moveTo(chocobo.root)
+	:parentType("PORTRAIT")
+	:pos(-chocobo.outliner.Head:getPivot())
+
 -- Arm parts
-local defaultParts = parts:createTable(function(part) return part:getName():find("ArmDefault") end)
-local slimParts    = parts:createTable(function(part) return part:getName():find("ArmSlim")    end)
+local defaultParts = chocobo:createGroup(function(part) return part:getName():find("ArmDefault") end)
+local slimParts    = chocobo:createGroup(function(part) return part:getName():find("ArmSlim")    end)
 
 -- Vanilla skin parts
-local skinParts = parts:createTable(function(part) return part:getName():find("_[sS]kin") end)
+local skinParts = chocobo:createGroup(function(part) return part:getName():find("_[sS]kin") end)
 
 -- Layer parts
 local layerTypes = {"HAT", "JACKET", "LEFT_SLEEVE", "RIGHT_SLEEVE", "LEFT_PANTS_LEG", "RIGHT_PANTS_LEG", "CAPE"}
 local layerParts = {}
 for _, type in pairs(layerTypes) do
-	layerParts[type] = parts:createTable(function(part) return part:getName():find(type) end)
+	layerParts[type] = chocobo:createGroup(function(part) return part:getName():find(type) end)
 end
 
 -- Apply translucent cull
-local flatParts = parts:createTable(function(part) return part:getName():find("_[fF]lat") end)
-for _, part in ipairs(flatParts) do
-	part:primaryRenderType("TRANSLUCENT_CULL")
-end
+chocobo:createGroup(function(part) return part:getName():find("_[fF]lat") end):primaryRenderType("TRANSLUCENT_CULL")
 
 -- Determine vanilla player type on init
 local vanillaAvatarType
@@ -38,28 +50,20 @@ function events.RENDER(delta, context)
 	
 	-- Model shape
 	local slimShape = (skin.curr and vanillaAvatarType == "SLIM") or (slim.curr and not skin.curr)
-	for _, part in ipairs(defaultParts) do
-		part:visible(not slimShape)
-	end
-	for _, part in ipairs(slimParts) do
-		part:visible(slimShape)
-	end
+	defaultParts:visible(not slimShape)
+	slimParts:visible(slimShape)
 	
 	-- Skin textures
 	local skinType = skin.curr and "SKIN" or "PRIMARY"
-	for _, part in ipairs(skinParts) do
-		part:primaryTexture(skinType)
-	end
+	skinParts:primaryTexture(skinType)
 	
 	-- Cape textures
-	parts.group.Cape:primaryTexture(skin.curr and "CAPE" or "PRIMARY")
+	chocobo.outliner.Cape:primaryTexture(skin.curr and "CAPE" or "PRIMARY")
 	
 	-- Layer toggling
 	for layerType, parts in pairs(layerParts) do
 		local enabled = player:isSkinLayerVisible(layerType)
-		for _, part in ipairs(parts) do
-			part:visible(enabled)
-		end
+		parts:visible(enabled)
 	end
 	
 end

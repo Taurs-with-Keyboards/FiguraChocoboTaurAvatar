@@ -2,6 +2,9 @@
 local parts = require("lib.PartsAPI")
 local sync  = require("lib.LetThatSyncFig")
 
+-- Parts setup
+local chocobo = parts.new(models.ChocoboTaur)
+
 -- Synced variables setup
 local saddleType = sync.new("AccessoriesSaddle", 1):config()
 
@@ -41,40 +44,40 @@ function events.RENDER(delta, context)
 	local state = saddleTypes[saddleType.curr]
 	
 	-- Apply
-	parts.group.Saddles:visible(state.saddle)
-	parts.group.Saddlebags:visible(state.bags)
-	parts.group.Saddles.Storage:visible(state.storage)
+	chocobo.outliner.Saddles:visible(state.saddle)
+	chocobo.outliner.Saddlebags:visible(state.bags)
+	chocobo.outliner.Saddles.Storage:visible(state.storage)
 	
 	-- Apply textures
 	if saddleTypes[saddleType.curr].texture then
-		parts.group.Saddles:primaryTexture("CUSTOM", state.texture)
+		chocobo.outliner.Saddles:primaryTexture("CUSTOM", state.texture)
 	end
 	
 end
 
--- Play sound if adjusting saddle
-local function saddleSound()
+-- Apply sound to sync updates
+saddleType:addFuncs(function(self)
+	
+	-- Get state
+	local state = self.curr
 	
 	-- Sounds
 	if player:isLoaded() then
-		if saddleTypes[saddleType.curr].saddle ~= _type.saddle then
+		if saddleTypes[state].saddle ~= _type.saddle then
 			sounds:playSound("entity.horse.saddle", player:getPos(), 0.5)
 		end
-		if saddleTypes[saddleType.curr].bags ~= _type.bags then
+		if saddleTypes[state].bags ~= _type.bags then
 			sounds:playSound("item.armor.equip_generic", player:getPos(), 0.5)
 		end
-		if saddleTypes[saddleType.curr].storage ~= _type.storage then
+		if saddleTypes[state].storage ~= _type.storage then
 			sounds:playSound("block.wood.place", player:getPos(), 0.5)
 		end
 	end
 	
 	-- Save last saddle
-	_type = saddleTypes[saddleType.curr]
+	_type = saddleTypes[state]
 	
-end
-
--- Apply sound to sync updates
-saddleType:applyFunc(saddleSound)
+end)
 
 -- Host only instructions
 if not host:isHost() then return end

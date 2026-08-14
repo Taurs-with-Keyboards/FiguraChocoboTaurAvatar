@@ -3,6 +3,9 @@ local parts   = require("lib.PartsAPI")
 local sync    = require("lib.LetThatSyncFig")
 local origins = require("lib.OriginsAPI")
 
+-- Parts setup
+local chocobo = parts.new(models.ChocoboTaur)
+
 -- All colors
 local texs = {
 	
@@ -83,7 +86,7 @@ local _tex = nil
 local override = false
 
 -- Texture parts
-local texParts = parts:createTable(function(part) return part:getName():find("_[sS]wap") end)
+local texParts = chocobo:createGroup(function(part) return part:getName():find("_[sS]wap") end)
 
 function events.RENDER(delta, context)
 	
@@ -102,11 +105,7 @@ function events.RENDER(delta, context)
 		local curTex = texs[texMap[tex.curr]]
 		
 		-- Apply textures
-		for _, part in ipairs(texParts) do
-			
-			part:primaryTexture("CUSTOM", curTex.tex)
-			
-		end
+		texParts:primaryTexture("CUSTOM", curTex.tex)
 		
 		-- Glowing outline
 		renderer:outlineColor(curTex.color)

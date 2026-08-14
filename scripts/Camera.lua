@@ -26,8 +26,11 @@ local parts = require("lib.PartsAPI")
 local sync  = require("lib.LetThatSyncFig")
 local lerp  = require("lib.LerpAPI")
 
+-- Parts setup
+local chocobo = parts.new(models.ChocoboTaur)
+
 -- Variable setup
-local camera = parts.group.Camera
+local camera = chocobo.outliner.Camera
 if not camera then return end
 
 -- Get server data
@@ -62,7 +65,7 @@ local function cameraReset()
 		:crosshairOffset(nil)
 	
 	-- Show head
-	parts.group.Head:visible(true)
+	chocobo.outliner.Head:visible(true)
 	
 end
 
@@ -117,7 +120,7 @@ function events.RENDER(delta, context)
 				:crosshairOffset(not allowEye.curr and crossLerp.currPos or nil)
 			
 			-- Hide head
-			parts.group.Head:visible(not (renderer:isFirstPerson() and (context == "OTHER" or context == "RENDER")))
+			chocobo.outliner.Head:visible(not (renderer:isFirstPerson() and (context == "OTHER" or context == "RENDER")))
 			
 		else
 			
@@ -139,8 +142,8 @@ end
 if not host:isHost() then return end
 
 -- Save server to config
-allowEye:applyFunc(function()
-	savedServers[serverId] = allowEye.curr
+allowEye:addFuncs(function(self)
+	savedServers[serverId] = self.curr
 	config:save("CameraServers", savedServers)
 end)
 
