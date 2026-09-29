@@ -92,8 +92,8 @@ function events.RENDER(delta, context)
 	
 	-- Origin check
 	override = false
-	for i, v in ipairs(texMap) do
-		if origins.hasOrigin(player, "chocobotaur:chocobotaur_"..v) then
+	for i = 1, #texMap do
+		if origins.hasOrigin(player, "chocobotaur:chocobotaur_"..texMap[i]) then
 			tex.curr = i
 			override = true
 			break
