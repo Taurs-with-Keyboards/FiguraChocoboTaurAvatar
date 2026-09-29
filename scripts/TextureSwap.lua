@@ -11,43 +11,43 @@ local texs = {
 	
 	yellow = {
 		tex   = textures["textures.yellowchocobo"] or textures["ChocoboTaur.yellowchocobo"],
-		color = vectors.hexToRGB("F5F372")
+		color = vectors.hexToRGB("#F5F372")
 	},
 	green = {
 		tex   = textures["textures.greenchocobo"] or textures["ChocoboTaur.greenchocobo"],
-		color = vectors.hexToRGB("45C04B")
+		color = vectors.hexToRGB("#45C04B")
 	},
 	blue = {
 		tex   = textures["textures.bluechocobo"] or textures["ChocoboTaur.bluechocobo"],
-		color = vectors.hexToRGB("5696F3")
+		color = vectors.hexToRGB("#5696F3")
 	},
 	white = {
 		tex   = textures["textures.whitechocobo"] or textures["ChocoboTaur.whitechocobo"],
-		color = vectors.hexToRGB("C4C4BE")
+		color = vectors.hexToRGB("#C4C4BE")
 	},
 	black = {
 		tex   = textures["textures.blackchocobo"] or textures["ChocoboTaur.blackchocobo"],
-		color = vectors.hexToRGB("495254")
+		color = vectors.hexToRGB("#495254")
 	},
 	gold = {
 		tex   = textures["textures.goldchocobo"] or textures["ChocoboTaur.goldchocobo"],
-		color = vectors.hexToRGB("CAA028")
+		color = vectors.hexToRGB("#CAA028")
 	},
 	pink = {
 		tex   = textures["textures.pinkchocobo"] or textures["ChocoboTaur.pinkchocobo"],
-		color = vectors.hexToRGB("E298AE")
+		color = vectors.hexToRGB("#E298AE")
 	},
 	red = {
 		tex   = textures["textures.redchocobo"] or textures["ChocoboTaur.redchocobo"],
-		color = vectors.hexToRGB("DD464A")
+		color = vectors.hexToRGB("#DD464A")
 	},
 	purple = {
 		tex   = textures["textures.purplechocobo"] or textures["ChocoboTaur.purplechocobo"],
-		color = vectors.hexToRGB("AA5CF5")
+		color = vectors.hexToRGB("#AA5CF5")
 	},
 	flame = {
 		tex   = textures["textures.flamechocobo"] or textures["ChocoboTaur.flamechocobo"],
-		color = vectors.hexToRGB("954040")
+		color = vectors.hexToRGB("#954040")
 	}
 	
 }
@@ -146,9 +146,9 @@ if next(colors) ~= nil then
 		-- Create mermod colors
 		local appliedColors = {
 			hover     = color,
-			active    = (color + 0.25):applyFunc(function(a) return math.min(a, 1) end),
+			active    = math.map(color, 0, 1, 0.1, 0.9),
 			primary   = "#"..vectors.rgbToHex(color),
-			secondary = "#"..vectors.rgbToHex((color - 0.1):applyFunc(function(a) return math.min(a, 1) end))
+			secondary = "#"..vectors.rgbToHex(math.map(color, 0, 1, 0.1, 0.9))
 		}
 		
 		-- Update action wheel colors
