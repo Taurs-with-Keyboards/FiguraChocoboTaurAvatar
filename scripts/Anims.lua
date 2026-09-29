@@ -4,7 +4,7 @@ local parts = require("lib.PartsAPI")
 -- Parts setup
 local chocobo = parts.new(models.ChocoboTaur)
 
-function events.RENDER(delta, context)
+function events.RENDER(delta)
 	
 	-- Crouch offset
 	local bodyRot = vanilla_model.BODY:getOriginRot(delta)

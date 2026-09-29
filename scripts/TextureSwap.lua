@@ -88,7 +88,7 @@ local override = false
 -- Texture parts
 local texParts = chocobo:createGroup(function(part) return part:getName():find("_[sS]wap") end)
 
-function events.RENDER(delta, context)
+function events.RENDER()
 	
 	-- Origin check
 	override = false
@@ -131,14 +131,8 @@ pcall(require, "scripts.Accessories") -- Tries to find script, not required
 -- Don't preform if color properties is empty
 if next(colors) ~= nil then
 	
-	-- Store init colors
-	local initColors = {}
-	for k, v in pairs(colors) do
-		initColors[k] = v
-	end
-	
 	-- Update action wheel colors
-	function events.RENDER(delta, context)
+	function events.RENDER()
 		
 		-- Variable
 		local color = texs[texMap[tex.curr]].color
@@ -204,7 +198,7 @@ for k, v in pairs(texItems) do
 end
 
 -- Update actions
-function events.RENDER(delta, context)
+function events.RENDER()
 	
 	if action_wheel:isEnabled() then
 		if acts.chocoboPage then

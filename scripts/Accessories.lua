@@ -38,7 +38,7 @@ local saddleTypes = {
 -- Variable
 local _type = saddleTypes[saddleType.curr]
 
-function events.RENDER(delta, context)
+function events.RENDER()
 	
 	-- State
 	local state = saddleTypes[saddleType.curr]
@@ -135,7 +135,7 @@ local saddleInfo = {
 }
 
 -- Update actions
-function events.RENDER(delta, context)
+function events.RENDER()
 	
 	if action_wheel:isEnabled() then
 		if acts.chocoboPage then
