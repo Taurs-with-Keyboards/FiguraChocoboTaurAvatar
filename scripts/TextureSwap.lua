@@ -125,10 +125,10 @@ if not host:isHost() then return end
 
 -- Required scripts
 local s, pageNav, acts, colors = pcall(require, "scripts.ActionWheel")
-if not s then return end -- Kills script early if ActionWheel.lua isnt found
+if not s then return end -- Kills script early if ActionWheel.lua isn't found
 pcall(require, "scripts.Accessories") -- Tries to find script, not required
 
--- Dont preform if color properties is empty
+-- Don't preform if color properties is empty
 if next(colors) ~= nil then
 	
 	-- Store init colors
@@ -220,8 +220,8 @@ function events.RENDER(delta, context)
 				{
 					"",
 					{text = "Chocobo Texture\n\n", bold = true, color = colors.primary},
-					{text = ("Sets the lower body to use the %s varient chocobo!\n"):format(texMap[tex.curr]:gsub("^%l", string.upper)), color = colors.secondary},
-					{text = override and "Your origin is currently controling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or colors.secondary}
+					{text = ("Sets the lower body to use the %s variant chocobo!\n"):format(texMap[tex.curr]:gsub("^%l", string.upper)), color = colors.secondary},
+					{text = override and "Your origin is currently controlling your texture!" or "Left click, Right click, or scroll to select a texture!", color = override and "gold" or colors.secondary}
 				}
 			))
 			:item(texs[texMap[tex.curr]].item)

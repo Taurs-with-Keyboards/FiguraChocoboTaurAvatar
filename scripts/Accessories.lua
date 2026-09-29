@@ -84,7 +84,7 @@ if not host:isHost() then return end
 
 -- Required scripts
 local s, pageNav, acts, colors = pcall(require, "scripts.ActionWheel")
-if not s then return end -- Kills script early if ActionWheel.lua isnt found
+if not s then return end -- Kills script early if ActionWheel.lua isn't found
 
 -- Check for if page already exists
 local pageExists = action_wheel:getPage("Chocobo")
@@ -113,11 +113,11 @@ acts.accessoriesSaddle = chocoboPage:newAction()
 -- Saddle context info table
 local saddleInfo = {
 	{
-		title = {label = "No Saddle", text = "You do not have a saddle equiped."},
+		title = {label = "No Saddle", text = "You do not have a saddle equipped."},
 		item  = {"chococraft:chocobo_feather", "feather"}
 	},
 	{
-		title = {label = "Saddle", text = "You have a saddle equiped."},
+		title = {label = "Saddle", text = "You have a saddle equipped."},
 		item  = {"chococraft:chocobo_saddle", "saddle"}
 	},
 	{
